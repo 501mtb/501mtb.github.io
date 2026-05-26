@@ -1,0 +1,81 @@
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    margin-left: auto;
+    gap: 15px;
+}
+
+.nav-lang {
+    display: flex;
+    gap: 10px;
+}
+
+
+.lang-system {
+  position: relative;
+  z-index: 99999;
+}
+
+/* hamburger button */
+
+
+/* panel */
+.lang-panel {
+  position: absolute;
+  right: 0;
+  top: 45px;
+  min-width: 160px;
+  display: none;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(20,20,20,0.95);
+}
+
+/* show */
+.lang-panel.show {
+  display: flex;
+}
+
+/* close button */
+.lang-close {
+  text-align: right;
+  margin-top: 5px;
+  margin-right: 18px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+}
+
+/* buttons */
+.lang-panel button {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+
+  background: transparent;
+  color: white;
+  text-align: left;
+
+  transition: 0.3s;
+}
+
+.lang-panel button:hover {
+  background: rgba(255,255,255,0.1);
+}
+ button img {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 25px;
+  width: 30px;
+ }
+ .icon {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+ }

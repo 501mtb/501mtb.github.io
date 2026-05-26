@@ -1,0 +1,36 @@
+
+a {
+    text-decoration: none;
+    font-style: "Oswald", sans-serif;
+}
+
+
+.lien {
+    display: flex;
+    color: blue;
+    font-weight: 600;
+    flex-direction: column;
+    text-decoration: none;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 13px;
+}
+.contact {
+    text-decoration: none;
+}
+
+footer{
+        display: flex;
+        justify-content: space-evenly;
+        text-decoration: none;
+        flex-wrap: wrap;}
+
+.copyright{
+    background: #f5f5f5;
+    margin: 0 20px;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: bold;
+    text-wrap: nowrap;
+    display: flex;
+}

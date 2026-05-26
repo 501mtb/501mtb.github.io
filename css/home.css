@@ -1,0 +1,49 @@
+ 
+ /* HOME PAGE */
+ 
+ 
+ 
+ .logoh { 
+    width: 180px; height: 50px;
+    background-image: url("../images/logo/logoh.png");
+    background-size: cover;
+    }
+
+ .lang-btn {
+  font-size: 26px;
+  cursor: pointer;
+}
+ .lang-btn i {
+   font-size: 24px;
+ }
+
+   .slogan {
+      text-align: center;
+   }
+
+
+ .landing-page { 
+    position: relative;
+    display: flex; 
+    flex-wrap: wrap; 
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 50vh; 
+    background-image: url("../images/home/pdc.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+	.pdp {
+        position: absolute;
+        right: 20px; top: 50px; 
+        border: 6px solid #06ff0671;
+        border-radius: 50%;
+        width: 200px; height: 200px;
+        display: block; 
+        overflow: hidden;}
+	.pdp img {width: 100%; height: auto; display: block;}
+
+
+
+

@@ -1,0 +1,82 @@
+
+.card {
+    display: flex;
+}
+
+
+
+.info1 {
+    background-image: url("../images/leader/1.jpg");
+    aspect-ratio: 3 / 4;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: solid 0.5px;
+    min-width: auto;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+.info2 {
+    background-image: url("../images/leader/2.jpg");
+    aspect-ratio: 3 / 4;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: solid 0.5px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+.info3 {
+    background-image: url("../images/leader/3.jpg");
+    aspect-ratio: 3 / 4;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: solid 0.5px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+.info4 {
+    background-image: url("../images/leader/4.jpg");
+    aspect-ratio: 3 / 4;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: solid 0.5px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+.info5 {
+    background-image: url("../images/leader/5.jpg");
+    aspect-ratio: 3 / 4;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: solid 0.5px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+.info6 {
+    background-image: url("../images/leader/6.jpg");
+    aspect-ratio: 3 / 4;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: solid 0.5px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+
+

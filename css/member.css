@@ -1,0 +1,183 @@
+/* 501 MTB MEMBER */
+
+.member1 {
+    aspect-ratio: 6 / 9;
+    background-image: url("../images/member/1.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: solid 0.5px;
+    margin: 1px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+.member2 {
+    aspect-ratio: 6 / 9;
+    background-image: url("../images/member/2.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: solid 0.5px;
+    margin: 1px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+.member3 {
+    aspect-ratio: 6 / 9;
+    background-image: url("../images/member/3.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: solid 0.5px;
+    margin: 1px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+.member4 {aspect-ratio: 6 / 9;
+    background-image: url("../images/member/4.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: solid 0.5px;
+    margin: 1px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+.member5 {aspect-ratio: 6 / 9;
+    background-image: url("../images/member/5.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: solid 0.5px;
+    margin: 1px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+.member6 {aspect-ratio: 6 / 9;
+    background-image: url("../images/member/6.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: solid 0.5px;
+    margin: 1px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+.member7 {aspect-ratio: 6 / 9;
+    background-image: url("../images/member/7.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: solid 0.5px;
+    margin: 1px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+.member8 {aspect-ratio: 6 / 9;
+    background-image: url("../images/member/8.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: solid 0.5px;
+    margin: 1px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+.member9 {aspect-ratio: 6 / 9;
+    background-image: url("../images/member/9.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: solid 0.5px;
+    margin: 1px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+.member10 {aspect-ratio: 6 / 9;
+    background-image: url("../images/member/10.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: solid 0.5px;
+    margin: 1px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+.member11 {aspect-ratio: 6 / 9;
+    background-image: url("../images/member/11.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: solid 0.5px;
+    margin: 1px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+.member12 {aspect-ratio: 6 / 9;
+    background-image: url("../images/member/12.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: solid 0.5px;
+    margin: 1px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+.member13 {aspect-ratio: 6 / 9;
+    background-image: url("../images/member/13.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: solid 0.5px;
+    margin: 1px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+.member14 {aspect-ratio: 6 / 9;
+    background-image: url("../images/member/14.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: solid 0.5px;
+    margin: 1px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+.member15 {aspect-ratio: 6 / 9;
+    background-image: url("../images/member/15.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.member16 {aspect-ratio: 6 / 9;
+    background-image: url("../images/member/16.jpg");
+    background-size: cover;
+    background-position: center;
+}

@@ -1,0 +1,71 @@
+
+
+
+.type1 { color: black;
+    font-style: "Ethnocentric", sans-serif;
+    font-style: normal;
+    background-color: #ffffff30;
+    text-align: center;
+}
+
+.boxV01 {
+    background-image: url(../images/home/1.jpg);
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 3 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.boxV02 {
+    background-image: url(../images/home/2.jpg);
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 3 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.boxV03 {
+    background-image: url(../images/home/3.jpg);
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 3 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.boxA6 {
+    background-image: url(../images/home/6.jpg);
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.boxA7 {
+    background-image: url(../images/home/7.jpg);
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.boxA8 {
+    background-image: url(../images/home/8.jpg);
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
