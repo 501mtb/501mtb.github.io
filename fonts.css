@@ -49,7 +49,7 @@ body {
 }
 .event-title {
     font-family: "Oswald", sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     color: white;
     text-align: center;
     background-color: #000000aa;
@@ -85,7 +85,7 @@ body {
     border-radius: 3px;
     color: #000000e9;
     background-color: #ffffff9b;
-    font-size: 2vh;
+    font-size: 1.5vh;
     padding: 4px 15px;
     top: 20px;
     left: 10px;     
@@ -100,7 +100,7 @@ body {
     padding: 5px 30px;
     bottom: 20px;
     text-align: right;
-    font-size: 2vh;
+    font-size: 1.5vh;
     right: 5px;
 }
 
@@ -111,7 +111,7 @@ body {
     text-align: center;
     position: absolute;
     background-color: #ffffffae;
-    font-size: 1.8vh;
+    font-size: 1.5vh;
     padding: 5px 20px;
     top: 10px;
     left: 10px;
@@ -125,7 +125,7 @@ body {
     padding: 5px 30px;
     bottom: 20px;
     text-align: center;
-    font-size: 2vh;
+    font-size: 1.3vh;
     right: 5px;
 }
 
