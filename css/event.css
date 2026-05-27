@@ -12,7 +12,7 @@
 .gridA1> :last-child:nth-child(odd) {grid-column: span 2;}
 
 .boxX {
-    background-image: url(../images/home/X.jpg);
+    background-image: url(../images/event/X.jpg);
     background-size: cover;
     background-position: center;
     aspect-ratio: 16 / 9;
@@ -22,7 +22,7 @@
 }
 
 .boxY {
-    background-image: url(../images/home/Y.jpg);
+    background-image: url(../images/event/Y.jpg);
     background-size: cover;
     background-position: center;
     aspect-ratio: 16 / 9;
@@ -32,7 +32,7 @@
 }
 
 .boxZ {
-    background-image: url(../images/home/Z.jpg);
+    background-image: url(../images/event/Z.jpg);
     background-size: cover;
     background-position: center;
     aspect-ratio: 16 / 9;
