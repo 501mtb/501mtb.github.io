@@ -175,9 +175,24 @@
     background-image: url("../images/member/15.jpg");
     background-size: cover;
     background-position: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: solid 0.5px;
+    margin: 1px;
+    border-radius: 5px;
+    flex-wrap: wrap;
 }
 .member16 {aspect-ratio: 6 / 9;
     background-image: url("../images/member/16.jpg");
     background-size: cover;
     background-position: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: solid 0.5px;
+    margin: 1px;
+    border-radius: 5px;
+    flex-wrap: wrap;
 }
+
