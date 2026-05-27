@@ -11,7 +11,16 @@
 }
 .gridA1> :last-child:nth-child(odd) {grid-column: span 2;}
 
-
+.boxA6 {
+    background-image: url("../images/event/6.jpg");
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid 0.5px #000000e9;
+}
 .boxA5 {
     background-image: url("../images/event/5.jpg");
     background-size: cover;
