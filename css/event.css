@@ -11,6 +11,37 @@
 }
 .gridA1> :last-child:nth-child(odd) {grid-column: span 2;}
 
+.boxX {
+    background-image: url(../images/home/X.jpg);
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.boxY {
+    background-image: url(../images/home/Y.jpg);
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.boxZ {
+    background-image: url(../images/home/Z.jpg);
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
 .boxA6 {
     background-image: url("../images/event/6.jpg");
     background-size: cover;
