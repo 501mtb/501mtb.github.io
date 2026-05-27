@@ -38,8 +38,8 @@
     justify-content: space-between;
 }
 
-.boxA6 {
-    background-image: url(../images/home/6.jpg);
+.boxX {
+    background-image: url(../images/home/X.jpg);
     background-size: cover;
     background-position: center;
     aspect-ratio: 16 / 9;
@@ -48,8 +48,8 @@
     justify-content: space-between;
 }
 
-.boxA7 {
-    background-image: url(../images/home/7.jpg);
+.boxY {
+    background-image: url(../images/home/Y.jpg);
     background-size: cover;
     background-position: center;
     aspect-ratio: 16 / 9;
@@ -58,8 +58,8 @@
     justify-content: space-between;
 }
 
-.boxA8 {
-    background-image: url(../images/home/8.jpg);
+.boxZ {
+    background-image: url(../images/home/Z.jpg);
     background-size: cover;
     background-position: center;
     aspect-ratio: 16 / 9;
