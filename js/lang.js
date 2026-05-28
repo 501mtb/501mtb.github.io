@@ -31,7 +31,7 @@ const translations = {
     nav_5: "Riders",
     nav_6: "About",
     nav_7: "Shop",
-    linkalbum: "🔗View album"
+    linkalbum: "🔗View album",
 
     bio: "Discover Yourself, Broaden Your Horizon, Explore The World",
     bio2: "We Develop and Promote Mountain Biking; We Stand together to Build Strong-United MTB Community; Throught Events-Trail-Ride and Community Support",
@@ -69,7 +69,7 @@ const translations = {
         nav_5: "Riders",
         nav_6: "À propos",
         nav_7: "Boutique",
-        linkalbum: "🔗Voir album"
+        linkalbum: "🔗Voir album",
 
     bio: "Se Découvrir, Dépasser Ses Limites, Explorer Le Monde",
     bio2: "Nous développons et promouvons le vélo tout terrain; Ensemble, nous sommes une communauté VTT solidaire qui organise des evenements, randonnées, et soutient la communauté locale. ",
@@ -106,7 +106,7 @@ const translations = {
     nav_5: "Mpitaingina",
     nav_6: "501Mtb",
     nav_7: "Tsena",
-    linkalbum: "🔗Hijery sary"
+    linkalbum: "🔗Hijery sary",
 
     bio: "Fantaro Ny Tanjakao, Mivoara Hatrany, Izahao ny Tontolo Hafa",
     bio2: "Mampivelatra sy mampiroborobo ny biskileta an-tendrombohitra izahay; Miraihina, miray saina, mifanampy ho kilioba Iray tena matanjaka; Amin'ny alalan'ny fikarakarana hetsika mahakasika ny bisikileta,sy fanohanana ny fiarahamonina",
