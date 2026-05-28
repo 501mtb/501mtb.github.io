@@ -3,6 +3,7 @@
 .gridA1 {
     display: flex;
     text-align: center;
+    align-items: center;
     font-size: 2.5vh;
     font-weight: 700;
     background-color: #ffffff36;
