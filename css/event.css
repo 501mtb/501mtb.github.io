@@ -42,6 +42,27 @@
     justify-content: space-between;
 }
 
+.boxA8 {
+    background-image: url("../images/event/8.jpg");
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid 0.5px #000000e9;
+}
+
+.boxA7 {
+    background-image: url("../images/event/7.jpg");
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid 0.5px #000000e9;
+}
 
 .boxA6 {
     background-image: url("../images/event/6.jpg");
