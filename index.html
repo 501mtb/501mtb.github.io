@@ -399,7 +399,7 @@ document.querySelectorAll("#values .value-toggle").forEach(button=>{
     return val(row, base+"_"+l);
   }
   try {
-    const response = await fetch("./Classeur_501MTB_V2.xlsx?v=2", {cache:"no-store"});
+    const response = await fetch("./Classeur_501MTB_V2.xlsx?v=3", {cache:"no-store"});
     if (!response.ok) throw new Error("Workbook not found");
     const workbook = XLSX.read(await response.arrayBuffer(), {type:"array", cellDates:true});
     const events = readSheet(workbook,"Events").filter(r => val(r,"id") && ["planned","open","completed"].includes(val(r,"status").toLowerCase()));
@@ -499,7 +499,7 @@ renderUsefulLinks();
       if(!window.XLSX){
         await new Promise((resolve,reject)=>{const s=document.createElement("script");s.src="./assets/js/xlsx.full.min.js";s.onload=resolve;s.onerror=reject;document.head.appendChild(s);});
       }
-      const response=await fetch("./Classeur_501MTB_V2.xlsx?v=2",{cache:"no-store"});
+      const response=await fetch("./Classeur_501MTB_V2.xlsx?v=3",{cache:"no-store"});
       if(!response.ok)throw new Error("Workbook unavailable");
       const workbook=XLSX.read(await response.arrayBuffer(),{type:"array"});
       const sheet=workbook.Sheets.Events;
