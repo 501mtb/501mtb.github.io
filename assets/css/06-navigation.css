@@ -1,0 +1,203 @@
+/* Header order: logo, language selector, hamburger navigation */
+.nav {
+  position:relative;
+  gap:14px
+}
+.brand {
+  display:flex;
+  align-items:center;
+  flex:1 1 auto;
+  min-width:0
+}
+.brand img {
+  display:block;
+  width:auto;
+  height:44px;
+  max-width:min(44vw,190px);
+  object-fit:contain;
+  object-position:left center
+}
+#language {
+  flex:0 0 auto;
+  order:2
+}
+.menu-toggle {
+  order:3;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:5px;
+  width:44px;
+  height:42px;
+  padding:8px;
+  background:transparent;
+  border:1px solid #555;
+  border-radius:5px;
+  cursor:pointer
+}
+.menu-toggle span {
+  display:block;
+  width:22px;
+  height:2px;
+  background:var(--white);
+  border-radius:2px;
+  transition:transform .2s,opacity .2s
+}
+.menu-toggle[aria-expanded="true"] span:first-child {
+  transform:translateY(7px) rotate(45deg)
+}
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity:0
+}
+.menu-toggle[aria-expanded="true"] span:last-child {
+  transform:translateY(-7px) rotate(-45deg)
+}
+#main-nav {
+  display:none;
+  position:absolute;
+  top:calc(100% + 1px);
+  right:22px;
+  z-index:10;
+  min-width:210px;
+  max-width:calc(100vw - 44px);
+  padding:10px;
+  background:#090909;
+  border:1px solid #303030;
+  border-radius:8px;
+  box-shadow:0 12px 30px #000b;
+  flex-direction:column;
+  align-items:stretch;
+  gap:0;
+  flex-wrap:nowrap
+}
+#main-nav.is-open {
+  display:flex
+}
+#main-nav a {
+  display:block;
+  padding:11px 14px;
+  border-radius:4px;
+  font-size:.95rem
+}
+#main-nav a:hover,#main-nav a:focus-visible {
+  background:#151f15;
+  color:var(--green)
+}
+@media(max-width:420px) {
+  .nav {
+    padding:12px 14px;
+    gap:10px
+  }
+  .brand img {
+    height:38px;
+    max-width:44vw
+  }
+  #main-nav {
+    right:14px;
+    max-width:calc(100vw - 28px)
+  }
+}
+/* Tablet header: keep the logo, language and all navigation on one horizontal line */
+@media(min-width:721px) and (max-width:1024px) {
+
+.nav {
+    flex-direction:row!important;
+    align-items:center!important;
+    flex-wrap:nowrap!important;
+    gap:12px!important;
+    padding:12px 18px!important
+  }
+
+.brand {
+    order:1!important;
+    flex:0 1 auto!important;
+    min-width:0!important
+  }
+
+.brand img {
+    height:38px!important;
+    max-width:clamp(100px,18vw,150px)!important
+  }
+
+#language {
+    order:2!important;
+    flex:0 0 auto!important;
+    padding:7px 6px!important
+  }
+
+.menu-toggle {
+    display:none!important
+  }
+
+#main-nav {
+    display:flex!important;
+    position:static!important;
+    order:3!important;
+    flex:1 1 auto!important;
+    min-width:0!important;
+    max-width:none!important;
+    width:auto!important;
+    padding:0!important;
+    background:transparent!important;
+    border:0!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+    flex-direction:row!important;
+    align-items:center!important;
+    justify-content:flex-end!important;
+    gap:clamp(7px,1.15vw,13px)!important;
+    flex-wrap:nowrap!important
+  }
+
+#main-nav a {
+    white-space:nowrap!important;
+    padding:6px 0!important;
+    font-size:clamp(.72rem,1.1vw,.86rem)!important
+  }
+}
+/* Phone/normal mode: keep logo, language selector and hamburger on one horizontal row */
+@media(max-width:720px) {
+
+.nav {
+    align-items:center!important;
+    flex-direction:row!important;
+    flex-wrap:nowrap!important;
+    gap:10px!important;
+    padding:12px 14px!important
+  }
+
+.brand {
+    order:1!important;
+    flex:1 1 auto!important;
+    min-width:0!important
+  }
+
+.brand img {
+    display:block!important;
+    height:38px!important;
+    width:auto!important;
+    max-width:min(48vw,190px)!important;
+    object-fit:contain!important;
+    object-position:left center!important
+  }
+
+#language {
+    order:2!important;
+    flex:0 0 auto!important;
+    padding:7px 6px!important
+  }
+
+.menu-toggle {
+    order:3!important;
+    flex:0 0 42px!important;
+    width:42px!important;
+    height:42px!important
+  }
+
+#main-nav {
+    top:calc(100% + 1px)!important;
+    right:14px!important;
+    left:auto!important
+  }
+}
