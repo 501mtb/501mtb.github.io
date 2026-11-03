@@ -1,0 +1,291 @@
+:root{color-scheme:dark;--black:#050505;--panel:#111;--white:#f2f2f2;--muted:#b8b8b8;--green:#06ff06}
+@font-face{font-family:"Ethnocentric";src:url("./assets/fonts/Ethnocentric.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap}
+.eyebrow{font-family:"Ethnocentric",Arial,Helvetica,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--black);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.6}a{color:inherit}header{position:sticky;top:0;z-index:5;background:#050505ed;border-bottom:1px solid #292929}.nav{max-width:1120px;margin:auto;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:900;font-size:1.35rem;letter-spacing:2px;text-decoration:none}.brand span{color:var(--green)}nav{display:flex;align-items:center;gap:22px;flex-wrap:wrap}nav a{text-decoration:none;font-size:.9rem}nav a:hover,.accent{color:var(--green)}select{background:#111;color:white;border:1px solid #555;padding:8px;border-radius:4px}.hero{min-height:72vh;display:grid;place-items:center;text-align:center;padding:80px 22px;background:radial-gradient(ellipse at 50% 75%,#103010 0, #080d08 30%,#050505 68%)}.hero-inner{max-width:850px}.eyebrow{color:var(--green);letter-spacing:4px;font-weight:700;font-size:.82rem;text-transform:uppercase}.hero h1{font-size:clamp(2.8rem,8vw,6.5rem);line-height:.98;letter-spacing:2px;margin:18px 0;text-transform:uppercase}.hero h1 span{color:var(--green)}.hero p{max-width:640px;margin:22px auto;color:#d0d0d0;font-size:1.08rem}.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:28px}.button{display:inline-block;padding:12px 20px;border:1px solid var(--green);text-decoration:none;font-weight:700;text-transform:uppercase;letter-spacing:1px}.button.primary{background:var(--green);color:#050505}.button:hover{transform:translateY(-2px)}section{max-width:1120px;margin:auto;padding:43px 22px}section h2{text-transform:uppercase;font-size:clamp(1.8rem,4vw,3rem);line-height:1.1;margin:0 0 11px}section h2 span{color:var(--green)}.intro{max-width:760px;color:var(--muted);margin-top:10px;margin-bottom:10px}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px}.card{background:var(--panel);border:1px solid #282828;padding:24px;min-height:160px}.card .number{color:var(--green);font-weight:900;letter-spacing:2px}.card h3{text-transform:uppercase;margin:10px 0}.card p{color:var(--muted);margin-bottom:0}.callout{border:1px solid #2c2c2c;padding:30px;display:flex;align-items:center;justify-content:space-between;gap:22px;background:linear-gradient(110deg,#101810,#090909)}footer{border-top:1px solid #292929;padding:26px 22px;text-align:center;color:#aaa;font-size:.9rem}
+/* Completed rides: photo cards with translucent captions */
+.ride-gallery{display:grid!important;width:100%;grid-template-columns:unset!important;grid-template-rows:repeat(3,auto)!important;grid-auto-flow:column!important;grid-auto-columns:100%!important;gap:14px;overflow-x:auto!important;overflow-y:hidden;padding:8px 2px 18px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin;align-items:stretch}
+.ride-gallery>.past-ride-card{position:relative;min-width:0;min-height:0;padding:0;overflow:hidden;aspect-ratio:16/9;scroll-snap-align:start;border:1px solid #303030;border-radius:12px;background:#090909}
+.ride-gallery .event-photo{position:absolute;inset:0;margin:0;height:100%;width:100%}
+.ride-gallery .event-photo img{display:block;width:100%;height:100%!important;max-height:none!important;object-fit:cover!important;margin:0!important}
+.ride-gallery .event-photo .story-link{right:9px;bottom:9px;z-index:3}
+.ride-gallery .ride-glass{position:absolute;inset:0;z-index:2;pointer-events:none;color:#fff}
+.ride-gallery .ride-glass-side{position:absolute;width:max-content;max-width:48%;min-width:0;padding:6px 9px;background:rgba(8,12,10,.58);border:1px solid rgba(255,255,255,.22);border-radius:8px;backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);font-size:.72rem;line-height:1.2;text-shadow:0 1px 3px #000;overflow-wrap:anywhere}
+.ride-gallery .ride-glass-date{top:12px;left:12px;max-width:42%;text-align:left}
+.ride-gallery .ride-glass-location{top:12px;right:12px;max-width:42%;text-align:right}
+.ride-gallery .ride-glass-description{left:12px;bottom:12px;max-width:42%;text-align:left}
+.ride-gallery .ride-glass-title{left:12px;bottom:12px;right:auto;width:max-content;max-width:42%;text-align:left}
+.ride-gallery .ride-glass-description span{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.ride-gallery .ride-glass strong{display:block;font-size:.9rem;line-height:1.2;overflow-wrap:anywhere}
+.ride-gallery .ride-glass span{display:block;margin-top:3px;color:#f0f0f0}
+@media(max-width:600px){.ride-gallery{grid-template-columns:unset!important;grid-template-rows:repeat(3,auto)!important;grid-auto-flow:column!important;grid-auto-columns:100%!important}.ride-gallery>.past-ride-card{aspect-ratio:16/9}.ride-gallery .ride-glass-side{padding:5px 7px;font-size:.66rem}.ride-gallery .ride-glass strong{font-size:.74rem}.ride-gallery .ride-glass-date{top:10px;left:10px;max-width:42%}.ride-gallery .ride-glass-location{top:10px;right:10px;max-width:42%}.ride-gallery .ride-glass-description{left:10px;bottom:10px;max-width:42%}.ride-gallery .ride-glass-title{left:10px;bottom:10px;right:auto;max-width:42%;text-align:left}}
+@media(min-width:900px){.ride-gallery{grid-template-columns:unset!important;grid-template-rows:repeat(3,auto)!important;grid-auto-flow:column!important;grid-auto-columns:100%!important}}
+@media(min-width:601px) and (max-width:900px){.ride-gallery{grid-template-columns:unset!important;grid-template-rows:repeat(2,auto)!important;grid-auto-flow:column!important;grid-auto-columns:calc((100% - 14px)/2)!important;overflow-x:auto!important;overflow-y:hidden!important}.ride-gallery>.past-ride-card{width:100%;min-width:0;aspect-ratio:4/3}}
+/* Force upcoming rides to use the same photo-card layout as completed rides */
+#upcoming-events-list{display:grid!important;grid-template-columns:unset!important;grid-template-rows:repeat(3,auto)!important;grid-auto-flow:column!important;grid-auto-columns:100%!important;gap:14px;overflow-x:auto!important;overflow-y:hidden!important;padding:8px 2px 18px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;align-items:stretch}
+#upcoming-events-list>.past-ride-card{position:relative!important;display:block!important;width:100%!important;min-width:0!important;min-height:0!important;height:auto!important;padding:0!important;overflow:hidden!important;aspect-ratio:16/9!important;scroll-snap-align:start;border:1px solid #303030;border-radius:12px;background:#090909}
+#upcoming-events-list>.past-ride-card>.event-photo{position:absolute!important;inset:0!important;margin:0!important;height:100%!important;width:100%!important}
+#upcoming-events-list>.past-ride-card>.event-photo img{display:block!important;width:100%!important;height:100%!important;max-height:none!important;object-fit:cover!important;margin:0!important}
+#upcoming-events-list>.past-ride-card>.ride-glass{position:absolute!important;inset:0!important;z-index:2!important;pointer-events:none!important;color:#fff}
+#upcoming-events-list .ride-glass-side{position:absolute!important;width:max-content!important;max-width:42%!important;min-width:0!important;padding:6px 9px!important;background:rgba(8,12,10,.58)!important;border:1px solid rgba(255,255,255,.22)!important;border-radius:8px!important;backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);font-size:.72rem;line-height:1.2;text-shadow:0 1px 3px #000;overflow-wrap:anywhere}
+#upcoming-events-list .ride-glass-date{top:12px!important;left:12px!important;text-align:left!important}
+#upcoming-events-list .ride-glass-location{top:12px!important;right:12px!important;text-align:right!important}
+#upcoming-events-list .ride-glass-title{left:12px!important;bottom:12px!important;right:auto!important;text-align:left!important}
+#upcoming-events-list .ride-glass strong{display:block!important;font-size:.9rem!important;line-height:1.2!important;overflow-wrap:anywhere}
+@media(max-width:600px){#upcoming-events-list{grid-template-columns:unset!important;grid-template-rows:repeat(3,auto)!important;grid-auto-flow:column!important;grid-auto-columns:100%!important}#upcoming-events-list>.past-ride-card{aspect-ratio:16/9!important}#upcoming-events-list .ride-glass-side{padding:5px 7px!important;font-size:.66rem}#upcoming-events-list .ride-glass strong{font-size:.74rem!important}#upcoming-events-list .ride-glass-date{top:10px!important;left:10px!important}#upcoming-events-list .ride-glass-location{top:10px!important;right:10px!important}#upcoming-events-list .ride-glass-title{left:10px!important;bottom:10px!important}}
+@media(min-width:601px) and (max-width:900px){#upcoming-events-list{grid-template-columns:unset!important;grid-template-rows:repeat(2,auto)!important;grid-auto-flow:column!important;grid-auto-columns:calc((100% - 14px)/2)!important;overflow-x:auto!important;overflow-y:hidden!important}#upcoming-events-list>.past-ride-card{width:100%!important;min-width:0!important;aspect-ratio:4/3!important}}
+/* Center all ride captions together along the bottom, leaving the link clear */
+.ride-gallery .ride-glass{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-end!important;gap:5px!important;padding:12px!important}
+.ride-gallery .ride-glass-side{position:static!important;inset:auto!important;transform:none!important;width:max-content!important;max-width:100%!important;text-align:center!important;margin:0!important}
+.ride-gallery .ride-glass-date,.ride-gallery .ride-glass-location,.ride-gallery .ride-glass-title,.ride-gallery .ride-glass-description{position:static!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;text-align:center!important;max-width:100%!important}
+#upcoming-events-list .ride-glass{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-end!important;gap:5px!important;padding:12px!important}
+#upcoming-events-list .ride-glass-side{position:static!important;inset:auto!important;transform:none!important;width:max-content!important;max-width:100%!important;text-align:center!important;margin:0!important}
+#upcoming-events-list .ride-glass-date,#upcoming-events-list .ride-glass-location,#upcoming-events-list .ride-glass-title{position:static!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;text-align:center!important;max-width:100%!important}
+@media(max-width:600px){.ride-gallery .ride-glass,#upcoming-events-list .ride-glass{gap:4px!important;padding:10px!important}.ride-gallery .ride-glass-side,#upcoming-events-list .ride-glass-side{padding:4px 7px!important}.ride-gallery .ride-glass strong,#upcoming-events-list .ride-glass strong{font-size:.74rem!important}}
+/* Completed rides keep the three-corner caption layout; reserve bottom-right for the story link */
+#past-events-list .ride-glass{display:block!important;padding:0!important}
+#past-events-list .ride-glass-side{position:absolute!important;inset:auto!important;transform:none!important;width:max-content!important;max-width:42%!important;min-width:0!important;margin:0!important;padding:6px 9px!important;text-align:left!important}
+#past-events-list .ride-glass-date{top:12px!important;left:12px!important;right:auto!important;bottom:auto!important;text-align:left!important}
+#past-events-list .ride-glass-location{top:12px!important;right:12px!important;left:auto!important;bottom:auto!important;text-align:right!important}
+#past-events-list .ride-glass-title{left:12px!important;bottom:12px!important;right:auto!important;top:auto!important;text-align:left!important}
+@media(max-width:600px){#past-events-list .ride-glass-side{padding:5px 7px!important;font-size:.66rem!important}#past-events-list .ride-glass-date{top:10px!important;left:10px!important}#past-events-list .ride-glass-location{top:10px!important;right:10px!important}#past-events-list .ride-glass-title{left:10px!important;bottom:10px!important}#past-events-list .ride-glass strong{font-size:.74rem!important}}
+/* Compact icon links for event and useful-link cards */
+.event-photo{position:relative;overflow:hidden;margin-bottom:12px}.event-photo img{margin-bottom:0!important}.event-photo .story-link{position:absolute;right:9px;bottom:20px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#06ff06;color:#050505;text-decoration:none;border:2px solid #050505;font-size:18px;font-weight:900;line-height:1}
+.compact-link-wrap{margin:10px 0 0!important}.compact-link{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#06ff06;color:#050505;text-decoration:none;font-size:18px;font-weight:900;line-height:1;border:2px solid #050505}.compact-link:focus-visible,.event-photo .story-link:focus-visible{outline:2px solid white;outline-offset:2px}
+/* Riders and Team: two fixed rows with horizontal scrolling */
+#riders-list,#leaders-list{display:grid!important;grid-auto-flow:column!important;grid-template-rows:repeat(2,max-content)!important;grid-template-columns:none!important;grid-auto-columns:142px!important;align-items:start!important;gap:14px!important;overflow-x:auto!important;overflow-y:hidden!important;overscroll-behavior-x:contain;scroll-snap-type:x mandatory!important;-webkit-overflow-scrolling:touch;padding:8px 2px 18px!important}
+#riders-list>.card,#leaders-list>.card{width:142px!important;min-width:142px!important;max-width:142px!important;scroll-snap-align:start!important}
+@media(min-width:721px){#riders-list,#leaders-list{grid-auto-columns:170px!important}#riders-list>.card,#leaders-list>.card{width:170px!important;min-width:170px!important;max-width:170px!important}}
+@media(max-width:600px){#riders-list,#leaders-list{grid-template-rows:repeat(2,max-content)!important;grid-auto-columns:142px!important;gap:12px!important}#riders-list>.card,#leaders-list>.card{width:142px!important;min-width:142px!important;max-width:142px!important}}
+/* Rider and leader photo cards: container follows each image's natural aspect ratio */
+#riders-list>.card,#leaders-list>.card{height:auto!important;aspect-ratio:auto!important;align-self:flex-start;padding:0!important;background:#080808!important;border:1px solid rgba(255,255,255,.24)!important}
+#riders-list .story-photo,#leaders-list .story-photo{position:relative!important;inset:auto!important;margin:0!important;width:100%!important;height:auto!important;overflow:hidden;background:#080808!important}
+#riders-list .story-photo img,#leaders-list .story-photo img{display:block!important;width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important;margin:0!important;background:#080808!important}
+#riders-list .story-link,#leaders-list .story-link{right:auto!important;left:9px!important;bottom:9px!important;z-index:4!important}
+#riders-list .profile-badge,#leaders-list .profile-badge{position:absolute;z-index:3;top:12px;left:12px;max-width:calc(100% - 24px);padding:5px 9px;border:1px solid rgba(255,255,255,.62);border-radius:8px;background:rgba(255,255,255,.28);color:#fff;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-size:.68rem;font-weight:800;letter-spacing:.7px;text-transform:uppercase;text-shadow:0 1px 3px rgba(0,0,0,.85);overflow-wrap:anywhere}
+#riders-list .profile-name,#leaders-list .profile-name{position:absolute;z-index:3;right:12px;bottom:12px;max-width:calc(100% - 24px);margin:0!important;padding:6px 9px;border:1px solid rgba(255,255,255,.62);border-radius:8px;background:rgba(255,255,255,.28);color:#fff;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-size:.9rem!important;line-height:1.15!important;text-align:right;text-shadow:0 1px 3px rgba(0,0,0,.9);overflow-wrap:anywhere}
+#riders-list .profile-extra,#leaders-list .profile-extra{display:none!important}
+@media(max-width:600px){#riders-list .profile-badge,#leaders-list .profile-badge{top:10px;left:10px}#riders-list .profile-name,#leaders-list .profile-name{right:10px;bottom:10px;font-size:.82rem!important}}
+/* Compact horizontal story rails for riders and leaders */
+#riders-list,#leaders-list{display:flex;flex-wrap:nowrap;gap:14px;overflow-x:auto;overflow-y:hidden;padding:8px 2px 18px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+#riders-list>.card,#leaders-list>.card{flex:0 0 142px;width:142px;min-width:142px;min-height:0;padding:10px;scroll-snap-align:start;position:relative;overflow:hidden;border-radius:12px}
+#riders-list .story-photo,#leaders-list .story-photo{position:relative;margin:-10px -10px 10px;overflow:hidden;background:#101010}
+#riders-list .story-photo img,#leaders-list .story-photo img{display:block;width:100%;height:170px!important;max-height:170px!important;object-fit:contain!important;margin:0!important;background:#080808}
+#riders-list .story-link,#leaders-list .story-link{position:absolute;right:7px;bottom:7px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#06ff06;color:#050505;text-decoration:none;border:2px solid #050505;font-size:18px;font-weight:900;line-height:1}
+#riders-list h3,#leaders-list h3{font-size:.94rem;line-height:1.2;overflow-wrap:anywhere;margin:8px 0}
+#riders-list p,#leaders-list p{font-size:.8rem;line-height:1.35;margin:5px 0;color:var(--muted)}
+@media(min-width:721px){#riders-list>.card,#leaders-list>.card{flex-basis:170px;width:170px;min-width:170px}#riders-list .story-photo img,#leaders-list .story-photo img{height:200px!important;max-height:200px!important}}@media(min-width:721px){.story-rail .card{flex-basis:170px;min-width:170px}.story-rail .story-photo img{height:200px}}footer a{color:var(--green)}footer .footer-useful{max-width:1120px;margin:0 auto 28px;text-align:left}footer .footer-useful h2{font-size:clamp(1.8rem,4vw,3rem);line-height:1.1;margin:0 0 18px;color:var(--white);text-transform:uppercase}footer .footer-useful h2 span{color:var(--green)}footer .footer-bottom{border-top:1px solid #292929;padding-top:20px;text-align:center}footer .footer-legal{display:flex;justify-content:center;gap:10px 22px;flex-wrap:wrap;margin-top:8px}footer #links-list{margin-top:12px}footer #links-list .useful-links-card{padding:10px 22px}footer #links-list .useful-link-item{padding:18px 0}@media(max-width:720px){.nav{align-items:flex-start;flex-direction:column}nav{gap:14px}.hero{min-height:65vh}.cards{grid-template-columns:1fr}.callout{align-items:flex-start;flex-direction:column}section{padding-top:52px;padding-bottom:52px}}
+/* FINAL OVERRIDE: Riders 9:16, Team leaders 3:4; two rows with horizontal scrolling */
+#riders-list,#leaders-list{display:grid!important;grid-template-columns:repeat(2,160px)!important;grid-template-rows:none!important;grid-auto-flow:column!important;grid-auto-columns:160px!important;grid-auto-rows:auto!important;align-items:start!important;justify-content:start!important;overflow-x:auto!important;overflow-y:hidden!important;gap:14px 16px!important;max-height:none!important;height:auto!important;flex-wrap:initial!important}
+#riders-list>.card,#leaders-list>.card{grid-column:auto!important;grid-row:auto!important;align-self:start!important;flex:none!important;width:160px!important;min-width:160px!important;max-width:160px!important;position:relative!important;overflow:hidden!important}
+#riders-list .story-photo{aspect-ratio:9/16!important;width:100%!important;height:auto!important;overflow:hidden!important}
+#riders-list .story-photo img{width:100%!important;height:100%!important;aspect-ratio:9/16!important;object-fit:cover!important;max-height:none!important}
+#leaders-list .story-photo{aspect-ratio:3/4!important;width:100%!important;height:auto!important;overflow:hidden!important}
+#leaders-list .story-photo img{width:100%!important;height:100%!important;aspect-ratio:3/4!important;object-fit:cover!important;max-height:none!important}
+@media(min-width:721px){#riders-list,#leaders-list{grid-template-columns:repeat(2,190px)!important;grid-auto-columns:190px!important}#riders-list>.card,#leaders-list>.card{width:190px!important;min-width:190px!important;max-width:190px!important}}
+
+/* Preserve two-row horizontal scrolling and fixed photo ratios */
+#riders-list,#leaders-list{display:grid!important;grid-auto-flow:column!important;grid-template-rows:repeat(2,max-content)!important;grid-template-columns:none!important;grid-auto-columns:160px!important;grid-auto-rows:auto!important;align-items:start!important;justify-content:start!important;gap:14px 16px!important;overflow-x:auto!important;overflow-y:hidden!important;max-height:none!important;height:auto!important;scroll-snap-type:x mandatory!important;-webkit-overflow-scrolling:touch!important}
+#riders-list>.card,#leaders-list>.card{grid-column:auto!important;grid-row:auto!important;width:160px!important;min-width:160px!important;max-width:160px!important;flex:none!important;align-self:start!important;scroll-snap-align:start!important;position:relative!important;overflow:hidden!important}
+#riders-list .story-photo,#leaders-list .story-photo{position:relative!important;display:block!important;width:100%!important;height:auto!important;margin:0!important;overflow:hidden!important;background:#080808!important}
+#riders-list .story-photo{aspect-ratio:9/16!important}
+#leaders-list .story-photo{aspect-ratio:3/4!important}
+#riders-list .story-photo img,#leaders-list .story-photo img{position:absolute!important;inset:0!important;display:block!important;width:100%!important;height:100%!important;max-height:none!important;aspect-ratio:auto!important;object-fit:cover!important;margin:0!important}
+#riders-list .story-link,#leaders-list .story-link{position:absolute!important;left:9px!important;bottom:9px!important;z-index:5!important}
+@media(min-width:721px){#riders-list,#leaders-list{grid-auto-columns:190px!important}#riders-list>.card,#leaders-list>.card{width:190px!important;min-width:190px!important;max-width:190px!important}}
+
+/* Header order: logo, language selector, hamburger navigation */
+.nav{position:relative;gap:14px}
+.brand{display:flex;align-items:center;flex:1 1 auto;min-width:0}
+.brand img{display:block;width:auto;height:44px;max-width:min(44vw,190px);object-fit:contain;object-position:left center}
+#language{flex:0 0 auto;order:2}
+.menu-toggle{order:3;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:44px;height:42px;padding:8px;background:transparent;border:1px solid #555;border-radius:5px;cursor:pointer}
+.menu-toggle span{display:block;width:22px;height:2px;background:var(--white);border-radius:2px;transition:transform .2s,opacity .2s}
+.menu-toggle[aria-expanded="true"] span:first-child{transform:translateY(7px) rotate(45deg)}
+.menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-toggle[aria-expanded="true"] span:last-child{transform:translateY(-7px) rotate(-45deg)}
+#main-nav{display:none;position:absolute;top:calc(100% + 1px);right:22px;z-index:10;min-width:210px;max-width:calc(100vw - 44px);padding:10px;background:#090909;border:1px solid #303030;border-radius:8px;box-shadow:0 12px 30px #000b;flex-direction:column;align-items:stretch;gap:0;flex-wrap:nowrap}
+#main-nav.is-open{display:flex}
+#main-nav a{display:block;padding:11px 14px;border-radius:4px;font-size:.95rem}
+#main-nav a:hover,#main-nav a:focus-visible{background:#151f15;color:var(--green)}
+@media(max-width:420px){.nav{padding:12px 14px;gap:10px}.brand img{height:38px;max-width:44vw}#main-nav{right:14px;max-width:calc(100vw - 28px)}}
+/* Tablet header: keep the logo, language and all navigation on one horizontal line */
+@media(min-width:721px) and (max-width:1024px){
+  .nav{flex-direction:row!important;align-items:center!important;flex-wrap:nowrap!important;gap:12px!important;padding:12px 18px!important}
+  .brand{order:1!important;flex:0 1 auto!important;min-width:0!important}
+  .brand img{height:38px!important;max-width:clamp(100px,18vw,150px)!important}
+  #language{order:2!important;flex:0 0 auto!important;padding:7px 6px!important}
+  .menu-toggle{display:none!important}
+  #main-nav{display:flex!important;position:static!important;order:3!important;flex:1 1 auto!important;min-width:0!important;max-width:none!important;width:auto!important;padding:0!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;flex-direction:row!important;align-items:center!important;justify-content:flex-end!important;gap:clamp(7px,1.15vw,13px)!important;flex-wrap:nowrap!important}
+  #main-nav a{white-space:nowrap!important;padding:6px 0!important;font-size:clamp(.72rem,1.1vw,.86rem)!important}
+}
+
+
+/* Phone/normal mode: keep logo, language selector and hamburger on one horizontal row */
+@media(max-width:720px){
+  .nav{align-items:center!important;flex-direction:row!important;flex-wrap:nowrap!important;gap:10px!important;padding:12px 14px!important}
+  .brand{order:1!important;flex:1 1 auto!important;min-width:0!important}
+  .brand img{display:block!important;height:38px!important;width:auto!important;max-width:min(48vw,190px)!important;object-fit:contain!important;object-position:left center!important}
+  #language{order:2!important;flex:0 0 auto!important;padding:7px 6px!important}
+  .menu-toggle{order:3!important;flex:0 0 42px!important;width:42px!important;height:42px!important}
+  #main-nav{top:calc(100% + 1px)!important;right:14px!important;left:auto!important}
+}
+
+/* Event-photo hero slider */
+#home.hero{position:relative;isolation:isolate;overflow:hidden;background:#050505;min-height:clamp(430px,56vw,680px);aspect-ratio:auto;width:100%;height:auto;display:flex;align-items:center}
+#home .hero-slides{position:absolute;inset:0;z-index:0;overflow:hidden;background:#050505!important;background-image:none!important}
+#home .hero-slide{position:absolute;inset:0;background-position:center;background-size:cover;background-repeat:no-repeat;opacity:0;transform:translateX(5%) scale(1.025);transition:opacity .7s ease,transform 1s ease}
+#home .hero-slide.is-active{opacity:1;transform:translateX(0) scale(1)}
+#home .hero-slide.slide-from-left{transform:translateX(-5%) scale(1.025)}
+#home .hero-slide.slide-from-right{transform:translateX(5%) scale(1.025)}
+#home .hero-inner{position:relative;z-index:1;width:fit-content;max-width:min(850px,100%);margin:0 auto;padding:0;background:transparent;border:0;border-radius:0;backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none;text-shadow:none}#home .hero-inner p{display:table;max-width:640px;margin:22px auto;padding:8px 12px;background:rgba(0,0,0,.34);border-radius:5px;text-shadow:0 2px 5px rgba(0,0,0,.95);box-shadow:0 0 12px rgba(0,0,0,.12)}
+@media(max-width:720px){
+#home.hero{min-height:320px;aspect-ratio:auto;padding:28px 14px}
+#home .hero-slide{background-size:auto 100%;background-position:left center;transform:none!important;transition:opacity .7s ease}
+#home .hero-slide.is-active{opacity:1}
+#home .hero-slide.pan-left{animation:heroPanLeft 6s linear forwards}
+#home .hero-slide.pan-right{animation:heroPanRight 6s linear forwards}
+#home .hero-inner{width:100%;padding:0;background:transparent;border:0;border-radius:0;backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none}#home .hero-inner p{display:block;margin:18px auto;padding:8px 10px;background:rgba(0,0,0,.34);border-radius:5px}
+@keyframes heroPanLeft{from{background-position:left center}to{background-position:right center}}
+@keyframes heroPanRight{from{background-position:right center}to{background-position:left center}}
+}
+@media(prefers-reduced-motion:reduce){#home .hero-slide{transition:none!important;animation:none!important}}
+@media(prefers-reduced-motion:reduce){#home .hero-slide{transition:none}}
+
+
+@media(min-width:721px){#home .hero-slide{transform:translateY(5%) scale(1.025)}#home .hero-slide.is-active{transform:translateY(0) scale(1)}#home .hero-slide.slide-from-top{transform:translateY(-5%) scale(1.025)}#home .hero-slide.slide-from-bottom{transform:translateY(5%) scale(1.025)}}
+
+.value-toggle{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;padding:0;margin:10px 0;background:transparent;border:0;color:inherit;text-align:left;font:inherit;font-weight:800;font-size:1.15rem;cursor:pointer}
+.value-toggle span{color:var(--green);font-size:1.3rem;flex-shrink:0}
+.value-long{margin-top:14px!important;padding-top:12px;border-top:1px solid #333;color:var(--muted);font-size:.98rem}
+.value-toggle:focus-visible{outline:2px solid var(--green);outline-offset:4px}
+
+#links-list.useful-links-box{display:block;margin-top:28px}
+#links-list .useful-links-card{min-height:0;padding:20px 28px;background:#111;border:1px solid #292929}
+#links-list .useful-links-grid{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:0 24px}
+#links-list .useful-link-item{display:grid;grid-template-columns:minmax(0,1fr) 64px;grid-template-rows:auto auto;align-items:center;gap:7px 14px;padding:24px 0;border-bottom:1px solid #292929;min-width:0;text-decoration:none;color:inherit}
+@media(min-width:1100px){#links-list .useful-links-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:0 22px}#links-list .useful-link-item{grid-template-columns:minmax(0,1fr) 48px;gap:7px 10px;padding:24px 0}#links-list .useful-link-icon{width:44px;height:44px}#links-list .useful-link-icon svg{width:24px;height:24px}#links-list .useful-link-item strong{font-size:1.05rem;overflow-wrap:anywhere}}
+#links-list .useful-link-item strong{grid-column:1;grid-row:2;font-size:1.3rem;line-height:1.25;overflow-wrap:anywhere}
+#links-list .useful-link-category{grid-column:1;grid-row:1;color:var(--muted);font-size:1rem;text-transform:uppercase;letter-spacing:2px}
+#links-list .useful-link-icon{grid-column:2;grid-row:1/3;justify-self:center;display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:var(--green);color:#050505;border:3px solid #050505;box-shadow:0 0 0 1px #333;text-decoration:none}
+#links-list .useful-link-icon svg{width:34px;height:34px;fill:currentColor}
+#links-list .useful-link-icon:focus-visible{outline:2px solid white;outline-offset:4px}
+@media(min-width:601px) and (max-width:1099px){#links-list .useful-links-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}}@media(max-width:600px){#links-list .useful-links-card{padding:14px 18px}#links-list .useful-links-grid{grid-template-columns:repeat(1,minmax(0,1fr));gap:0 16px}#links-list .useful-link-item{grid-template-columns:minmax(0,1fr) 38px;gap:6px 8px;padding:20px 0}#links-list .useful-link-category{font-size:.75rem;letter-spacing:1px}#links-list .useful-link-item strong{font-size:1rem;overflow-wrap:anywhere}#links-list .useful-link-icon{width:36px;height:36px}#links-list .useful-link-icon svg{width:20px;height:20px}}
+
+#home .hero-inner{width:100%;max-width:850px;margin:0 auto;padding:0}
+#home .hero h1{margin:16px 0}
+#home .hero p{margin:16px auto}
+@media(max-width:720px){#home .hero-inner{padding:0 8px}#home .hero h1{margin:12px 0}#home .hero p{margin:12px auto}}
+
+/* PDP inspired by V1: circular artwork immediately below the hero */
+.pdp-section{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:flex-end;min-height:320px;margin-top:-110px;padding:34px clamp(24px,6vw,72px) 34px 20px;max-width:none;overflow:visible;background:transparent!important;background-image:none!important;z-index:2}
+.pdp-section::before{content:"";position:absolute;inset:0;z-index:-1;background:none!important}
+.pdp-orbit{position:relative;width:clamp(190px,34vw,250px);aspect-ratio:1;border-radius:50%;padding:5px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.72);box-shadow:0 8px 28px rgba(0,0,0,.18),inset 0 1px 2px rgba(255,255,255,.8);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);overflow:hidden}
+.pdp-orbit::before{content:"";position:absolute;inset:5px;border:1px solid rgba(255,255,255,.62);border-radius:50%;pointer-events:none;z-index:2}
+.pdp-orbit::after{content:none!important}
+.pdp-orbit img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;border-radius:50%;border:1px solid rgba(255,255,255,.55)}
+.pdp-section{justify-content:center;gap:clamp(12px,3vw,36px)}.pdp-emblem{display:block;width:clamp(300px,46vw,450px);height:auto;max-height:390px;object-fit:contain;flex:0 1 420px;margin-left:clamp(8px,2vw,28px);border:0!important;outline:0!important;box-shadow:none!important;filter:drop-shadow(0 5px 7px rgba(0,0,0,.78)) drop-shadow(0 0 10px rgba(0,0,0,.52))!important;background:transparent!important}.pdp-section .pdp-orbit{margin-left:0!important;margin-right:clamp(18px,4vw,52px)!important;flex:0 0 auto;transform:translateY(0)}
+@media(max-width:600px){.pdp-section{min-height:250px;margin-top:-120px;padding:22px 10px;gap:4px;align-items:center}.pdp-emblem{width:60%;flex:0 1 60%;max-height:none;margin-left:0;transform:translateY(-12px)}.pdp-section .pdp-orbit{width:37%;margin-right:0!important;transform:translateY(0);padding:3px}}
+
+
+/* 501MTB fixed Facebook share tab */
+#mtb-facebook-share{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:9999;display:flex;align-items:center;gap:9px;padding:13px 12px 13px 14px;background:#000000e9;color:#E5E5E7;border:1px solid #06ff06;border-right:0;border-radius:12px 0 0 12px;text-decoration:none;font:700 12px/1.2 Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 4px 18px #0006;transition:background .2s,color .2s,transform .2s}
+#mtb-facebook-share:hover,#mtb-facebook-share:focus-visible{background:#06ff06;color:#000;outline:2px solid #fff;outline-offset:2px}
+#mtb-facebook-share svg{width:22px;height:22px;flex:0 0 22px;fill:#1877F2}
+#mtb-facebook-share:hover svg,#mtb-facebook-share:focus-visible svg{fill:#000}
+@media(max-width:600px){#mtb-facebook-share{top:auto;bottom:22%;transform:none;padding:12px 10px 12px 12px;gap:0}#mtb-facebook-share .mtb-share-label{display:none}#mtb-facebook-share svg{width:24px;height:24px;flex-basis:24px}}
+
+
+/* TEAM LEADERS: show up to six cards across on tablet and desktop */
+@media (min-width:601px){
+  #leaders-list{
+    display:grid!important;
+    grid-template-columns:repeat(6,minmax(0,1fr))!important;
+    grid-template-rows:none!important;
+    grid-auto-flow:row!important;
+    grid-auto-columns:auto!important;
+    gap:14px!important;
+    overflow:visible!important;
+    overflow-x:visible!important;
+    overflow-y:visible!important;
+    justify-content:stretch!important;
+    align-items:start!important;
+  }
+  #leaders-list>.card{
+    width:auto!important;
+    min-width:0!important;
+    max-width:none!important;
+    min-height:0!important;
+    flex:none!important;
+  }
+}
+
+/* Ethnocentric is reserved for uppercase interface text; body paragraphs keep their existing font. */
+.hero h1, section h2, .card h3, footer .footer-useful h2,
+#main-nav a, .button, .eyebrow,
+#riders-list .profile-badge, #leaders-list .profile-badge,
+#links-list .useful-link-category, #mtb-facebook-share {
+  font-family:"Ethnocentric",Arial,Helvetica,sans-serif;
+}
+/* Mobile hero title: keep the full MADAGASCAR heading inside the screen */
+@media(max-width:720px){
+  #home .hero-inner{width:100%;max-width:100%;min-width:0}
+  #home .hero h1{
+    width:100%;
+    max-width:100%;
+    font-size:clamp(1.55rem,7.2vw,2.8rem);
+    line-height:1.08;
+    letter-spacing:0;
+    overflow-wrap:anywhere;
+    word-break:normal;
+  }
+}
+
+/* Malagasy hero headline is longer; use a tighter mobile scale so it stays in-frame */
+@media(max-width:720px){
+  html[lang="mg"] #home .hero h1{
+    font-size:clamp(1.15rem,5.4vw,2rem);
+    line-height:1.16;
+    letter-spacing:-.35px;
+    max-width:100%;
+    overflow-wrap:anywhere;
+    text-wrap:balance;
+  }
+}
+
+
+/* Ethnocentric size adjustment — consistent across EN / FR / MG */
+.eyebrow{font-size:.68rem!important;letter-spacing:2.5px!important}
+.hero h1{font-size:clamp(1.05rem,4.4vw,3.8rem)!important;line-height:1.12!important;letter-spacing:0!important}
+section h2,footer .footer-useful h2{font-size:clamp(1.4rem,3.2vw,2.45rem)!important;line-height:1.12!important}
+.card h3{font-size:.9em!important;line-height:1.15!important}
+#main-nav a{font-size:clamp(.62rem,.95vw,.76rem)!important}
+.button{font-size:.82em!important;letter-spacing:.6px!important}
+#riders-list .profile-badge,#leaders-list .profile-badge{font-size:.56rem!important;letter-spacing:.45px!important}
+#links-list .useful-link-category{font-size:.86rem!important}
+#mtb-facebook-share{font-size:10px!important}
+
+
+/* Keep the glass name and status overlays visible in EN, FR and MG */
+#riders-list>.profile-card,#leaders-list>.profile-card{position:relative!important}
+#riders-list>.profile-card .profile-badge,#leaders-list>.profile-card .profile-badge{
+  display:block!important;position:absolute!important;z-index:5!important;
+  top:10px!important;left:10px!important;right:auto!important;bottom:auto!important;
+  max-width:calc(100% - 20px)!important;padding:5px 9px!important;
+  border:1px solid rgba(255,255,255,.62)!important;border-radius:8px!important;
+  background:rgba(255,255,255,.28)!important;color:#fff!important;
+  backdrop-filter:blur(10px)!important;-webkit-backdrop-filter:blur(10px)!important;
+  text-shadow:0 1px 3px rgba(0,0,0,.85)!important;
+  font-size:.56rem!important;letter-spacing:.45px!important;text-transform:uppercase!important;
+}
+#riders-list>.profile-card .profile-name,#leaders-list>.profile-card .profile-name{
+  display:block!important;position:absolute!important;z-index:5!important;
+  right:10px!important;left:auto!important;bottom:10px!important;top:auto!important;
+  max-width:calc(100% - 20px)!important;margin:0!important;padding:6px 9px!important;
+  border:1px solid rgba(255,255,255,.62)!important;border-radius:8px!important;
+  background:rgba(255,255,255,.28)!important;color:#fff!important;
+  backdrop-filter:blur(10px)!important;-webkit-backdrop-filter:blur(10px)!important;
+  text-align:right!important;text-shadow:0 1px 3px rgba(0,0,0,.9)!important;
+  font-size:.82rem!important;line-height:1.15!important;
+}
+
+.about-more{display:inline-flex;align-items:center;gap:14px;margin-top:20px;padding:12px 16px;border:1px solid #06ff06;border-radius:3px;color:#06ff06;text-decoration:none;font: .72rem Ethnocentric,Arial,sans-serif;letter-spacing:.04em;transition:background .2s,color .2s}.about-more:hover,.about-more:focus-visible{background:#06ff06;color:#050505;outline:none}
