@@ -38,12 +38,12 @@
 <li><a href="https://www.facebook.com/61559342776527/posts/122180970710311425/?app=fbl" target="_blank" rel="noopener noreferrer">Ride link 20 — date not provided</a></li>
 </ol><div class="status">20 unique links</div></article>
 <article class="card"><div class="tag">2026</div><h3 data-t="ride2026">All rides · 2026</h3><ol class="ride-list">
-<li><a href="https://www.facebook.com/61559342776527/posts/122206393922311425/?app=fbl" target="_blank" rel="noopener noreferrer">Ride link 01 — date not provided</a></li>
-<li><a href="https://www.facebook.com/61559342776527/posts/122207180774311425/?app=fbl" target="_blank" rel="noopener noreferrer">Ride link 02 — date not provided</a></li>
-<li><a href="https://www.facebook.com/61559342776527/posts/122216990582311425/?app=fbl" target="_blank" rel="noopener noreferrer">Ride link 03 — date not provided</a></li>
-<li><a href="https://www.facebook.com/61559342776527/posts/122217764960311425/?app=fbl" target="_blank" rel="noopener noreferrer">Ride link 04 — date not provided</a></li>
-<li><a href="https://www.facebook.com/61559342776527/posts/122218618124311425/?app=fbl" target="_blank" rel="noopener noreferrer">Ride link 05 — date not provided</a></li>
-<li><a href="https://www.facebook.com/61559342776527/posts/122219562050311425/?app=fbl" target="_blank" rel="noopener noreferrer">Ride link 06 — date not provided</a></li>
+<li><a href="https://www.facebook.com/61559342776527/posts/122206393922311425/?app=fbl" target="_blank" rel="noopener noreferrer">18 January 2026 · Tritriva</a></li>
+<li><a href="https://www.facebook.com/61559342776527/posts/122207180774311425/?app=fbl" target="_blank" rel="noopener noreferrer">25 January 2026 · Toamasina Tour</a></li>
+<li><a href="https://www.facebook.com/61559342776527/posts/122216990582311425/?app=fbl" target="_blank" rel="noopener noreferrer">03 May 2026 · TMF</a></li>
+<li><a href="https://www.facebook.com/61559342776527/posts/122217764960311425/?app=fbl" target="_blank" rel="noopener noreferrer">10 May 2026 · TMF Trail Preparation</a></li>
+<li><a href="https://www.facebook.com/61559342776527/posts/122218618124311425/?app=fbl" target="_blank" rel="noopener noreferrer">17 May 2026 · TMF Survey</a></li>
+<li><a href="https://www.facebook.com/61559342776527/posts/122219562050311425/?app=fbl" target="_blank" rel="noopener noreferrer">27 May 2026 · TMF Aid</a></li>
 <li><a href="https://www.facebook.com/61559342776527/posts/122219917286311425/?app=fbl" target="_blank" rel="noopener noreferrer">31 May 2026</a></li>
 <li><a href="https://www.facebook.com/61559342776527/posts/122220219146311425/?app=fbl" target="_blank" rel="noopener noreferrer">03 June 2026</a></li>
 <li><a href="https://www.facebook.com/61559342776527/posts/122221206626311425/?app=fbl" target="_blank" rel="noopener noreferrer">14 June 2026 · Bassindrano–Ivoloina</a></li>
@@ -77,7 +77,7 @@ function renderRideRegister(){
  if(!registerRows.length){box.textContent="No ride entries found.";return;}
  const l=document.documentElement.lang;
  const labels={en:["Date","Ride / Event","Distance","Location / Route","Facebook","Status"],fr:["Date","Sortie / Événement","Distance","Lieu / Parcours","Facebook","Statut"],mg:["Daty","Sortie / Hetsika","Halavirana","Toerana / Lalana","Facebook","Sata"]}[l]||["Date","Ride / Event","Distance","Location / Route","Facebook","Status"];
- const fmt=v=>{if(v instanceof Date&&!isNaN(v))return new Intl.DateTimeFormat(l==="fr"?"fr-FR":"en-GB").format(v);const x=String(v??"").trim();if(/^\\d{4}-\\d{2}-\\d{2}/.test(x)){const [y,m,d]=x.slice(0,10).split("-");return d+"/"+m+"/"+y;}return x;};
+ const fmt=v=>{if(v instanceof Date&&!isNaN(v)){const d=String(v.getUTCDate()).padStart(2,"0"),m=String(v.getUTCMonth()+1).padStart(2,"0"),y=v.getUTCFullYear();return l==="en"?m+"/"+d+"/"+y:d+"/"+m+"/"+y;}const x=String(v??"").trim();if(/^\\d{4}-\\d{2}-\\d{2}/.test(x)){const [y,m,d]=x.slice(0,10).split("-");return l==="en"?m+"/"+d+"/"+y:d+"/"+m+"/"+y;}return x;};
  const rows=[...registerRows].sort((a,b)=>new Date(b.Date)-new Date(a.Date));
  box.className="";
  box.innerHTML='<div style="overflow-x:auto"><table class="register-table"><thead><tr>'+labels.map(x=>'<th>'+x+'</th>').join("")+'</tr></thead><tbody>'+rows.map(r=>{const url=String(r["Facebook Link"]||"").trim();return '<tr><td>'+esc(fmt(r.Date))+'</td><td><strong>'+esc(r["Ride / Event"])+'</strong></td><td>'+esc(r["Distance (km)"]?r["Distance (km)"]+" km":"—")+'</td><td>'+esc(r["Lieu / Itinéraire"]||"—")+'</td><td>'+(url?'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">Open post ↗</a>':"—")+'</td><td class="register-status">'+esc(r["Statut"]||"—")+'</td></tr>';}).join("")+'</tbody></table></div>';
