@@ -37,6 +37,13 @@ footer{text-align:center;padding:28px 18px;color:#999;border-top:1px solid #2929
 @media(max-width:760px){main{padding:0 16px}.hero{min-height:360px;padding:68px 16px}.grid,.timeline,.governance{grid-template-columns:1fr}.badges{grid-template-columns:repeat(2,minmax(0,1fr))}.steps{grid-template-columns:1fr}section{padding:48px 0}.panel{padding:18px}}
 @media(max-width:420px){.badges{grid-template-columns:1fr}.hero h1{font-size:clamp(2rem,10vw,3.2rem)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.gallery-filters{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 20px}.gallery-filter{border:1px solid #465246;background:#0c100c;color:#dce5dc;padding:9px 13px;border-radius:3px;font: .68rem Ethnocentric,Arial,sans-serif;cursor:pointer;letter-spacing:.04em}.gallery-filter:hover,.gallery-filter.active{background:var(--green);border-color:var(--green);color:#050505}
+.photo-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:150px;gap:12px}.photo-tile{position:relative;overflow:hidden;padding:0;border:1px solid #293629;border-radius:9px;background:#101510;cursor:zoom-in;text-align:left;min-width:0}.photo-tile.wide{grid-column:span 2}.photo-tile.tall{grid-row:span 2}.photo-tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease,filter .35s ease}.photo-tile:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,#000c)}.photo-tile span{position:absolute;z-index:1;left:12px;bottom:11px;color:#fff;font: .66rem Ethnocentric,Arial,sans-serif;letter-spacing:.05em;text-shadow:0 1px 5px #000}.photo-tile:hover img,.photo-tile:focus-visible img{transform:scale(1.07);filter:saturate(1.15)}.photo-tile:focus-visible,.gallery-filter:focus-visible{outline:2px solid var(--green);outline-offset:3px}.photo-tile[hidden]{display:none}
+.lightbox{position:fixed;z-index:100;inset:0;background:#000f;display:grid;grid-template-columns:60px minmax(0,1fr) 60px;grid-template-rows:1fr auto;align-items:center;justify-items:center;padding:60px 18px 28px}.lightbox[hidden]{display:none}.lightbox img{max-width:min(100%,1100px);max-height:78vh;object-fit:contain;grid-column:2;grid-row:1}.lightbox button{border:1px solid #777;background:#101510dd;color:white;border-radius:50%;width:44px;height:44px;font-size:1.8rem;cursor:pointer}.lightbox-close{position:absolute;right:20px;top:18px}.lightbox-prev{grid-column:1;grid-row:1}.lightbox-next{grid-column:3;grid-row:1}.lightbox-count{grid-column:1/4;grid-row:2;color:#ddd;font-size:.85rem;padding-top:15px}
+@media(max-width:760px){.photo-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:125px;gap:9px}.lightbox{grid-template-columns:42px minmax(0,1fr) 42px;padding:60px 8px 22px}.lightbox button{width:36px;height:36px}.lightbox img{max-height:72vh}}
+@media(prefers-reduced-motion:reduce){.photo-tile img{transition:none}}
+
 </style>
 </head>
 <body>
@@ -94,6 +101,37 @@ footer{text-align:center;padding:28px 18px;color:#999;border-top:1px solid #2929
 <article class="panel"><h3 data-i18n="missionH">Our Mission</h3><p data-i18n="missionP">To develop and promote mountain biking by organizing events, supporting riders and building a strong and united MTB community.</p><details class="more"><summary data-i18n="readMore">Read more</summary><div class="detail" data-i18n="missionD">We put this mission into action through rides, competitions, rider development, community support, partnerships and the preservation of our shared activity history.</div></details></article>
 </div><div class="links"><a class="btn primary" href="./index.html" data-i18n="backHome">Explore 501MTB</a><a class="btn" href="./conduct-en.html" data-i18n="conduct">Code of Conduct</a><a class="btn" href="https://www.facebook.com/501MTB" target="_blank" rel="noopener">Facebook 501MTB ↗</a></div></section>
 </main>
+
+<section id="photo-gallery">
+ <div class="section-head"><div class="kicker">09 / 501MTB IN PICTURES</div><h2>THE COMMUNITY, IN ACTION.</h2><p>Moments from the original 501MTB photo archive. Select a category or open any photo to explore the gallery.</p></div>
+ <div class="gallery-filters" role="group" aria-label="Filter photos">
+  <button class="gallery-filter active" data-filter="all" type="button">ALL</button>
+  <button class="gallery-filter" data-filter="landscape" type="button">IDENTITY</button>
+  <button class="gallery-filter" data-filter="event" type="button">RIDES & EVENTS</button>
+  <button class="gallery-filter" data-filter="team" type="button">TEAM</button>
+  <button class="gallery-filter" data-filter="community" type="button">COMMUNITY</button>
+ </div>
+ <div class="photo-grid" id="photo-grid">
+  <button class="photo-tile wide" data-category="landscape" data-full="./assets/images/about/v1-images-home-1.jpg" aria-label="Open 501MTB identity photo"><img src="./assets/images/about/v1-images-home-1.jpg" alt="501MTB identity and mountain biking" loading="lazy"><span>501MTB / IDENTITY</span></button>
+  <button class="photo-tile" data-category="landscape" data-full="./assets/images/about/v1-images-home-2.jpg" aria-label="Open Toamasina photo"><img src="./assets/images/about/v1-images-home-2.jpg" alt="501MTB roots in Toamasina" loading="lazy"><span>ROOTS / TOAMASINA</span></button>
+  <button class="photo-tile" data-category="landscape" data-full="./assets/images/about/v1-images-home-3.jpg" aria-label="Open 501MTB photo"><img src="./assets/images/about/v1-images-home-3.jpg" alt="501MTB visual archive" loading="lazy"><span>501MTB / ARCHIVE</span></button>
+  <button class="photo-tile tall" data-category="event" data-full="./assets/images/about/v1-images-event-01.jpg" aria-label="Open ride event photo"><img src="./assets/images/about/v1-images-event-01.jpg" alt="501MTB ride and event" loading="lazy"><span>RIDES / EVENTS</span></button>
+  <button class="photo-tile" data-category="event" data-full="./assets/images/about/v1-images-event-1.jpg" aria-label="Open event photo"><img src="./assets/images/about/v1-images-event-1.jpg" alt="501MTB event archive" loading="lazy"><span>EVENT / ARCHIVE</span></button>
+  <button class="photo-tile" data-category="event" data-full="./assets/images/about/v1-images-event-X.jpg" aria-label="Open MTB activity photo"><img src="./assets/images/about/v1-images-event-X.jpg" alt="Mountain biking activity with 501MTB" loading="lazy"><span>MTB / ACTION</span></button>
+  <button class="photo-tile" data-category="event" data-full="./assets/images/about/v1-images-event-Y.jpg" aria-label="Open MTB event photo"><img src="./assets/images/about/v1-images-event-Y.jpg" alt="501MTB event moment" loading="lazy"><span>EVENT / MOMENTS</span></button>
+  <button class="photo-tile" data-category="team" data-full="./assets/images/about/v1-images-leader-1.jpg" aria-label="Open team photo"><img src="./assets/images/about/v1-images-leader-1.jpg" alt="501MTB leadership team" loading="lazy"><span>501MTB / TEAM</span></button>
+  <button class="photo-tile" data-category="team" data-full="./assets/images/about/v1-images-leader-2.jpg" aria-label="Open leadership photo"><img src="./assets/images/about/v1-images-leader-2.jpg" alt="501MTB team archive" loading="lazy"><span>TEAM / ARCHIVE</span></button>
+  <button class="photo-tile" data-category="community" data-full="./assets/images/about/v1-images-member-1.jpg" aria-label="Open rider photo"><img src="./assets/images/about/v1-images-member-1.jpg" alt="501MTB rider community" loading="lazy"><span>RIDERS / COMMUNITY</span></button>
+ </div>
+ <div class="lightbox" id="photo-lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+  <button class="lightbox-close" type="button" aria-label="Close photo">×</button>
+  <button class="lightbox-prev" type="button" aria-label="Previous photo">‹</button>
+  <img id="lightbox-image" alt="">
+  <button class="lightbox-next" type="button" aria-label="Next photo">›</button>
+  <div class="lightbox-count" id="lightbox-count"></div>
+ </div>
+</section>
+
 <footer>501MTB · Toamasina, Madagascar · <a href="./index.html">501mtb.github.io</a><div data-i18n="footerLine">Discover Yourself, Broaden Your Horizon, Explore The World</div></footer>
 <script>
 const translations={
@@ -139,5 +177,21 @@ s8k:"08 / Vina sy iraka",s8h:"Faravodilanitra mivelatra ho an'ny VTT eto Madagas
 function setLanguage(lang){const dict=translations[lang]||translations.en;document.documentElement.lang=lang;document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.dataset.i18n;if(dict[key]!==undefined){if(el.tagName==='BLOCKQUOTE'){const small=el.querySelector('small');el.firstChild.textContent=dict[key];if(small&&dict.ambQuoteSmall)small.textContent=dict.ambQuoteSmall}else el.textContent=dict[key]}});document.getElementById('language').value=lang;try{localStorage.setItem('501mtb-language',lang)}catch(e){}}
 const languageSelect=document.getElementById('language');let initial='en';try{initial=localStorage.getItem('501mtb-language')||'en'}catch(e){}setLanguage(initial);languageSelect.addEventListener('change',e=>setLanguage(e.target.value));
 const toggle=document.getElementById('menu-toggle'),nav=document.getElementById('main-nav');toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')!=='true';toggle.setAttribute('aria-expanded',String(open));nav.classList.toggle('open',open);toggle.setAttribute('aria-label',open?'Close navigation':'Open navigation')});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false')}));
+
+const galleryTiles=[...document.querySelectorAll('.photo-tile')];
+const galleryFilters=[...document.querySelectorAll('.gallery-filter')];
+galleryFilters.forEach(btn=>btn.addEventListener('click',()=>{galleryFilters.forEach(b=>b.classList.toggle('active',b===btn));galleryTiles.forEach(tile=>tile.hidden=btn.dataset.filter!=='all'&&tile.dataset.category!==btn.dataset.filter)}));
+const lightbox=document.getElementById('photo-lightbox'),lightboxImg=document.getElementById('lightbox-image'),lightboxCount=document.getElementById('lightbox-count');
+let currentPhoto=0,visiblePhotos=[];
+function showPhoto(index){visiblePhotos=galleryTiles.filter(tile=>!tile.hidden);currentPhoto=(index+visiblePhotos.length)%visiblePhotos.length;const tile=visiblePhotos[currentPhoto];lightboxImg.src=tile.dataset.full;lightboxImg.alt=tile.querySelector('img').alt;lightboxCount.textContent=(currentPhoto+1)+' / '+visiblePhotos.length}
+function openPhoto(tile){visiblePhotos=galleryTiles.filter(t=>!t.hidden);showPhoto(visiblePhotos.indexOf(tile));lightbox.hidden=false;document.body.style.overflow='hidden';lightbox.querySelector('.lightbox-close').focus()}
+function closePhoto(){lightbox.hidden=true;document.body.style.overflow='';lightboxImg.src=''}
+galleryTiles.forEach(tile=>tile.addEventListener('click',()=>openPhoto(tile)));
+lightbox.querySelector('.lightbox-close').addEventListener('click',closePhoto);
+lightbox.querySelector('.lightbox-prev').addEventListener('click',()=>showPhoto(currentPhoto-1));
+lightbox.querySelector('.lightbox-next').addEventListener('click',()=>showPhoto(currentPhoto+1));
+lightbox.addEventListener('click',e=>{if(e.target===lightbox)closePhoto()});
+document.addEventListener('keydown',e=>{if(lightbox.hidden)return;if(e.key==='Escape')closePhoto();if(e.key==='ArrowLeft')showPhoto(currentPhoto-1);if(e.key==='ArrowRight')showPhoto(currentPhoto+1)});
+
 </script>
 </body></html>
