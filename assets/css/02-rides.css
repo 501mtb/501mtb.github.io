@@ -1,0 +1,483 @@
+/* Completed rides: photo cards with translucent captions */
+.ride-gallery {
+  display:grid!important;
+  width:100%;
+  grid-template-columns:unset!important;
+  grid-template-rows:repeat(3,auto)!important;
+  grid-auto-flow:column!important;
+  grid-auto-columns:100%!important;
+  gap:14px;
+  overflow-x:auto!important;
+  overflow-y:hidden;
+  padding:8px 2px 18px;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;
+  align-items:stretch
+}
+.ride-gallery>.past-ride-card {
+  position:relative;
+  min-width:0;
+  min-height:0;
+  padding:0;
+  overflow:hidden;
+  aspect-ratio:16/9;
+  scroll-snap-align:start;
+  border:1px solid #303030;
+  border-radius:12px;
+  background:#090909
+}
+.ride-gallery .event-photo {
+  position:absolute;
+  inset:0;
+  margin:0;
+  height:100%;
+  width:100%
+}
+.ride-gallery .event-photo img {
+  display:block;
+  width:100%;
+  height:100%!important;
+  max-height:none!important;
+  object-fit:cover!important;
+  margin:0!important
+}
+.ride-gallery .event-photo .story-link {
+  right:9px;
+  bottom:9px;
+  z-index:3
+}
+.ride-gallery .ride-glass {
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+  color:#fff
+}
+.ride-gallery .ride-glass-side {
+  position:absolute;
+  width:max-content;
+  max-width:48%;
+  min-width:0;
+  padding:6px 9px;
+  background:rgba(8,12,10,.58);
+  border:1px solid rgba(255,255,255,.22);
+  border-radius:8px;
+  backdrop-filter:blur(7px);
+  -webkit-backdrop-filter:blur(7px);
+  font-size:.72rem;
+  line-height:1.2;
+  text-shadow:0 1px 3px #000;
+  overflow-wrap:anywhere
+}
+.ride-gallery .ride-glass-date {
+  top:12px;
+  left:12px;
+  max-width:42%;
+  text-align:left
+}
+.ride-gallery .ride-glass-location {
+  top:12px;
+  right:12px;
+  max-width:42%;
+  text-align:right
+}
+.ride-gallery .ride-glass-description {
+  left:12px;
+  bottom:12px;
+  max-width:42%;
+  text-align:left
+}
+.ride-gallery .ride-glass-title {
+  left:12px;
+  bottom:12px;
+  right:auto;
+  width:max-content;
+  max-width:42%;
+  text-align:left
+}
+.ride-gallery .ride-glass-description span {
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+  overflow:hidden
+}
+.ride-gallery .ride-glass strong {
+  display:block;
+  font-size:.9rem;
+  line-height:1.2;
+  overflow-wrap:anywhere
+}
+.ride-gallery .ride-glass span {
+  display:block;
+  margin-top:3px;
+  color:#f0f0f0
+}
+@media(max-width:600px) {
+  .ride-gallery {
+    grid-template-columns:unset!important;
+    grid-template-rows:repeat(3,auto)!important;
+    grid-auto-flow:column!important;
+    grid-auto-columns:100%!important
+  }
+  .ride-gallery>.past-ride-card {
+    aspect-ratio:16/9
+  }
+  .ride-gallery .ride-glass-side {
+    padding:5px 7px;
+    font-size:.66rem
+  }
+  .ride-gallery .ride-glass strong {
+    font-size:.74rem
+  }
+  .ride-gallery .ride-glass-date {
+    top:10px;
+    left:10px;
+    max-width:42%
+  }
+  .ride-gallery .ride-glass-location {
+    top:10px;
+    right:10px;
+    max-width:42%
+  }
+  .ride-gallery .ride-glass-description {
+    left:10px;
+    bottom:10px;
+    max-width:42%
+  }
+  .ride-gallery .ride-glass-title {
+    left:10px;
+    bottom:10px;
+    right:auto;
+    max-width:42%;
+    text-align:left
+  }
+}
+@media(min-width:900px) {
+  .ride-gallery {
+    grid-template-columns:unset!important;
+    grid-template-rows:repeat(3,auto)!important;
+    grid-auto-flow:column!important;
+    grid-auto-columns:100%!important
+  }
+}
+@media(min-width:601px) and (max-width:900px) {
+  .ride-gallery {
+    grid-template-columns:unset!important;
+    grid-template-rows:repeat(2,auto)!important;
+    grid-auto-flow:column!important;
+    grid-auto-columns:calc((100% - 14px)/2)!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important
+  }
+  .ride-gallery>.past-ride-card {
+    width:100%;
+    min-width:0;
+    aspect-ratio:4/3
+  }
+}
+/* Force upcoming rides to use the same photo-card layout as completed rides */
+#upcoming-events-list {
+  display:grid!important;
+  grid-template-columns:unset!important;
+  grid-template-rows:repeat(3,auto)!important;
+  grid-auto-flow:column!important;
+  grid-auto-columns:100%!important;
+  gap:14px;
+  overflow-x:auto!important;
+  overflow-y:hidden!important;
+  padding:8px 2px 18px;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  align-items:stretch
+}
+#upcoming-events-list>.past-ride-card {
+  position:relative!important;
+  display:block!important;
+  width:100%!important;
+  min-width:0!important;
+  min-height:0!important;
+  height:auto!important;
+  padding:0!important;
+  overflow:hidden!important;
+  aspect-ratio:16/9!important;
+  scroll-snap-align:start;
+  border:1px solid #303030;
+  border-radius:12px;
+  background:#090909
+}
+#upcoming-events-list>.past-ride-card>.event-photo {
+  position:absolute!important;
+  inset:0!important;
+  margin:0!important;
+  height:100%!important;
+  width:100%!important
+}
+#upcoming-events-list>.past-ride-card>.event-photo img {
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  max-height:none!important;
+  object-fit:cover!important;
+  margin:0!important
+}
+#upcoming-events-list>.past-ride-card>.ride-glass {
+  position:absolute!important;
+  inset:0!important;
+  z-index:2!important;
+  pointer-events:none!important;
+  color:#fff
+}
+#upcoming-events-list .ride-glass-side {
+  position:absolute!important;
+  width:max-content!important;
+  max-width:42%!important;
+  min-width:0!important;
+  padding:6px 9px!important;
+  background:rgba(8,12,10,.58)!important;
+  border:1px solid rgba(255,255,255,.22)!important;
+  border-radius:8px!important;
+  backdrop-filter:blur(7px);
+  -webkit-backdrop-filter:blur(7px);
+  font-size:.72rem;
+  line-height:1.2;
+  text-shadow:0 1px 3px #000;
+  overflow-wrap:anywhere
+}
+#upcoming-events-list .ride-glass-date {
+  top:12px!important;
+  left:12px!important;
+  text-align:left!important
+}
+#upcoming-events-list .ride-glass-location {
+  top:12px!important;
+  right:12px!important;
+  text-align:right!important
+}
+#upcoming-events-list .ride-glass-title {
+  left:12px!important;
+  bottom:12px!important;
+  right:auto!important;
+  text-align:left!important
+}
+#upcoming-events-list .ride-glass strong {
+  display:block!important;
+  font-size:.9rem!important;
+  line-height:1.2!important;
+  overflow-wrap:anywhere
+}
+@media(max-width:600px) {
+  #upcoming-events-list {
+    grid-template-columns:unset!important;
+    grid-template-rows:repeat(3,auto)!important;
+    grid-auto-flow:column!important;
+    grid-auto-columns:100%!important
+  }
+  #upcoming-events-list>.past-ride-card {
+    aspect-ratio:16/9!important
+  }
+  #upcoming-events-list .ride-glass-side {
+    padding:5px 7px!important;
+    font-size:.66rem
+  }
+  #upcoming-events-list .ride-glass strong {
+    font-size:.74rem!important
+  }
+  #upcoming-events-list .ride-glass-date {
+    top:10px!important;
+    left:10px!important
+  }
+  #upcoming-events-list .ride-glass-location {
+    top:10px!important;
+    right:10px!important
+  }
+  #upcoming-events-list .ride-glass-title {
+    left:10px!important;
+    bottom:10px!important
+  }
+}
+@media(min-width:601px) and (max-width:900px) {
+  #upcoming-events-list {
+    grid-template-columns:unset!important;
+    grid-template-rows:repeat(2,auto)!important;
+    grid-auto-flow:column!important;
+    grid-auto-columns:calc((100% - 14px)/2)!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important
+  }
+  #upcoming-events-list>.past-ride-card {
+    width:100%!important;
+    min-width:0!important;
+    aspect-ratio:4/3!important
+  }
+}
+/* Center all ride captions together along the bottom, leaving the link clear */
+.ride-gallery .ride-glass {
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+  gap:5px!important;
+  padding:12px!important
+}
+.ride-gallery .ride-glass-side {
+  position:static!important;
+  inset:auto!important;
+  transform:none!important;
+  width:max-content!important;
+  max-width:100%!important;
+  text-align:center!important;
+  margin:0!important
+}
+.ride-gallery .ride-glass-date,.ride-gallery .ride-glass-location,.ride-gallery .ride-glass-title,.ride-gallery .ride-glass-description {
+  position:static!important;
+  left:auto!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:auto!important;
+  text-align:center!important;
+  max-width:100%!important
+}
+#upcoming-events-list .ride-glass {
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+  gap:5px!important;
+  padding:12px!important
+}
+#upcoming-events-list .ride-glass-side {
+  position:static!important;
+  inset:auto!important;
+  transform:none!important;
+  width:max-content!important;
+  max-width:100%!important;
+  text-align:center!important;
+  margin:0!important
+}
+#upcoming-events-list .ride-glass-date,#upcoming-events-list .ride-glass-location,#upcoming-events-list .ride-glass-title {
+  position:static!important;
+  left:auto!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:auto!important;
+  text-align:center!important;
+  max-width:100%!important
+}
+@media(max-width:600px) {
+  .ride-gallery .ride-glass,#upcoming-events-list .ride-glass {
+    gap:4px!important;
+    padding:10px!important
+  }
+  .ride-gallery .ride-glass-side,#upcoming-events-list .ride-glass-side {
+    padding:4px 7px!important
+  }
+  .ride-gallery .ride-glass strong,#upcoming-events-list .ride-glass strong {
+    font-size:.74rem!important
+  }
+}
+/* Completed rides keep the three-corner caption layout; reserve bottom-right for the story link */
+#past-events-list .ride-glass {
+  display:block!important;
+  padding:0!important
+}
+#past-events-list .ride-glass-side {
+  position:absolute!important;
+  inset:auto!important;
+  transform:none!important;
+  width:max-content!important;
+  max-width:42%!important;
+  min-width:0!important;
+  margin:0!important;
+  padding:6px 9px!important;
+  text-align:left!important
+}
+#past-events-list .ride-glass-date {
+  top:12px!important;
+  left:12px!important;
+  right:auto!important;
+  bottom:auto!important;
+  text-align:left!important
+}
+#past-events-list .ride-glass-location {
+  top:12px!important;
+  right:12px!important;
+  left:auto!important;
+  bottom:auto!important;
+  text-align:right!important
+}
+#past-events-list .ride-glass-title {
+  left:12px!important;
+  bottom:12px!important;
+  right:auto!important;
+  top:auto!important;
+  text-align:left!important
+}
+@media(max-width:600px) {
+  #past-events-list .ride-glass-side {
+    padding:5px 7px!important;
+    font-size:.66rem!important
+  }
+  #past-events-list .ride-glass-date {
+    top:10px!important;
+    left:10px!important
+  }
+  #past-events-list .ride-glass-location {
+    top:10px!important;
+    right:10px!important
+  }
+  #past-events-list .ride-glass-title {
+    left:10px!important;
+    bottom:10px!important
+  }
+  #past-events-list .ride-glass strong {
+    font-size:.74rem!important
+  }
+}
+/* Compact icon links for event and useful-link cards */
+.event-photo {
+  position:relative;
+  overflow:hidden;
+  margin-bottom:12px
+}
+.event-photo img {
+  margin-bottom:0!important
+}
+.event-photo .story-link {
+  position:absolute;
+  right:9px;
+  bottom:20px;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#06ff06;
+  color:#050505;
+  text-decoration:none;
+  border:2px solid #050505;
+  font-size:18px;
+  font-weight:900;
+  line-height:1
+}
+.compact-link-wrap {
+  margin:10px 0 0!important
+}
+.compact-link {
+  display:inline-grid;
+  place-items:center;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:#06ff06;
+  color:#050505;
+  text-decoration:none;
+  font-size:18px;
+  font-weight:900;
+  line-height:1;
+  border:2px solid #050505
+}
+.compact-link:focus-visible,.event-photo .story-link:focus-visible {
+  outline:2px solid white;
+  outline-offset:2px
+}

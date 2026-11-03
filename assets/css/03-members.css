@@ -1,0 +1,218 @@
+/* Riders and Team: two fixed rows with horizontal scrolling */
+#riders-list,#leaders-list {
+  display:grid!important;
+  grid-auto-flow:column!important;
+  grid-template-rows:repeat(2,max-content)!important;
+  grid-template-columns:none!important;
+  grid-auto-columns:142px!important;
+  align-items:start!important;
+  gap:14px!important;
+  overflow-x:auto!important;
+  overflow-y:hidden!important;
+  overscroll-behavior-x:contain;
+  scroll-snap-type:x mandatory!important;
+  -webkit-overflow-scrolling:touch;
+  padding:8px 2px 18px!important
+}
+#riders-list>.card,#leaders-list>.card {
+  width:142px!important;
+  min-width:142px!important;
+  max-width:142px!important;
+  scroll-snap-align:start!important
+}
+@media(min-width:721px) {
+  #riders-list,#leaders-list {
+    grid-auto-columns:170px!important
+  }
+  #riders-list>.card,#leaders-list>.card {
+    width:170px!important;
+    min-width:170px!important;
+    max-width:170px!important
+  }
+}
+@media(max-width:600px) {
+  #riders-list,#leaders-list {
+    grid-template-rows:repeat(2,max-content)!important;
+    grid-auto-columns:142px!important;
+    gap:12px!important
+  }
+  #riders-list>.card,#leaders-list>.card {
+    width:142px!important;
+    min-width:142px!important;
+    max-width:142px!important
+  }
+}
+/* Rider and leader photo cards: container follows each image's natural aspect ratio */
+#riders-list>.card,#leaders-list>.card {
+  height:auto!important;
+  aspect-ratio:auto!important;
+  align-self:flex-start;
+  padding:0!important;
+  background:#080808!important;
+  border:1px solid rgba(255,255,255,.24)!important
+}
+#riders-list .story-photo,#leaders-list .story-photo {
+  position:relative!important;
+  inset:auto!important;
+  margin:0!important;
+  width:100%!important;
+  height:auto!important;
+  overflow:hidden;
+  background:#080808!important
+}
+#riders-list .story-photo img,#leaders-list .story-photo img {
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  margin:0!important;
+  background:#080808!important
+}
+#riders-list .story-link,#leaders-list .story-link {
+  right:auto!important;
+  left:9px!important;
+  bottom:9px!important;
+  z-index:4!important
+}
+#riders-list .profile-badge,#leaders-list .profile-badge {
+  position:absolute;
+  z-index:3;
+  top:12px;
+  left:12px;
+  max-width:calc(100% - 24px);
+  padding:5px 9px;
+  border:1px solid rgba(255,255,255,.62);
+  border-radius:8px;
+  background:rgba(255,255,255,.28);
+  color:#fff;
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  font-size:.68rem;
+  font-weight:800;
+  letter-spacing:.7px;
+  text-transform:uppercase;
+  text-shadow:0 1px 3px rgba(0,0,0,.85);
+  overflow-wrap:anywhere
+}
+#riders-list .profile-name,#leaders-list .profile-name {
+  position:absolute;
+  z-index:3;
+  right:12px;
+  bottom:12px;
+  max-width:calc(100% - 24px);
+  margin:0!important;
+  padding:6px 9px;
+  border:1px solid rgba(255,255,255,.62);
+  border-radius:8px;
+  background:rgba(255,255,255,.28);
+  color:#fff;
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  font-size:.9rem!important;
+  line-height:1.15!important;
+  text-align:right;
+  text-shadow:0 1px 3px rgba(0,0,0,.9);
+  overflow-wrap:anywhere
+}
+#riders-list .profile-extra,#leaders-list .profile-extra {
+  display:none!important
+}
+@media(max-width:600px) {
+  #riders-list .profile-badge,#leaders-list .profile-badge {
+    top:10px;
+    left:10px
+  }
+  #riders-list .profile-name,#leaders-list .profile-name {
+    right:10px;
+    bottom:10px;
+    font-size:.82rem!important
+  }
+}
+/* Compact horizontal story rails for riders and leaders */
+#riders-list,#leaders-list {
+  display:flex;
+  flex-wrap:nowrap;
+  gap:14px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  padding:8px 2px 18px;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:thin
+}
+#riders-list>.card,#leaders-list>.card {
+  flex:0 0 142px;
+  width:142px;
+  min-width:142px;
+  min-height:0;
+  padding:10px;
+  scroll-snap-align:start;
+  position:relative;
+  overflow:hidden;
+  border-radius:12px
+}
+#riders-list .story-photo,#leaders-list .story-photo {
+  position:relative;
+  margin:-10px -10px 10px;
+  overflow:hidden;
+  background:#101010
+}
+#riders-list .story-photo img,#leaders-list .story-photo img {
+  display:block;
+  width:100%;
+  height:170px!important;
+  max-height:170px!important;
+  object-fit:contain!important;
+  margin:0!important;
+  background:#080808
+}
+#riders-list .story-link,#leaders-list .story-link {
+  position:absolute;
+  right:7px;
+  bottom:7px;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#06ff06;
+  color:#050505;
+  text-decoration:none;
+  border:2px solid #050505;
+  font-size:18px;
+  font-weight:900;
+  line-height:1
+}
+#riders-list h3,#leaders-list h3 {
+  font-size:.94rem;
+  line-height:1.2;
+  overflow-wrap:anywhere;
+  margin:8px 0
+}
+#riders-list p,#leaders-list p {
+  font-size:.8rem;
+  line-height:1.35;
+  margin:5px 0;
+  color:var(--muted)
+}
+@media(min-width:721px) {
+  #riders-list>.card,#leaders-list>.card {
+    flex-basis:170px;
+    width:170px;
+    min-width:170px
+  }
+  #riders-list .story-photo img,#leaders-list .story-photo img {
+    height:200px!important;
+    max-height:200px!important
+  }
+}
+@media(min-width:721px) {
+  .story-rail .card {
+    flex-basis:170px;
+    min-width:170px
+  }
+  .story-rail .story-photo img {
+    height:200px
+  }
+}

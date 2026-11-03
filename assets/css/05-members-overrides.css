@@ -1,0 +1,137 @@
+/* FINAL OVERRIDE: Riders 9:16, Team leaders 3:4; two rows with horizontal scrolling */
+#riders-list,#leaders-list {
+  display:grid!important;
+  grid-template-columns:repeat(2,160px)!important;
+  grid-template-rows:none!important;
+  grid-auto-flow:column!important;
+  grid-auto-columns:160px!important;
+  grid-auto-rows:auto!important;
+  align-items:start!important;
+  justify-content:start!important;
+  overflow-x:auto!important;
+  overflow-y:hidden!important;
+  gap:14px 16px!important;
+  max-height:none!important;
+  height:auto!important;
+  flex-wrap:initial!important
+}
+#riders-list>.card,#leaders-list>.card {
+  grid-column:auto!important;
+  grid-row:auto!important;
+  align-self:start!important;
+  flex:none!important;
+  width:160px!important;
+  min-width:160px!important;
+  max-width:160px!important;
+  position:relative!important;
+  overflow:hidden!important
+}
+#riders-list .story-photo {
+  aspect-ratio:9/16!important;
+  width:100%!important;
+  height:auto!important;
+  overflow:hidden!important
+}
+#riders-list .story-photo img {
+  width:100%!important;
+  height:100%!important;
+  aspect-ratio:9/16!important;
+  object-fit:cover!important;
+  max-height:none!important
+}
+#leaders-list .story-photo {
+  aspect-ratio:3/4!important;
+  width:100%!important;
+  height:auto!important;
+  overflow:hidden!important
+}
+#leaders-list .story-photo img {
+  width:100%!important;
+  height:100%!important;
+  aspect-ratio:3/4!important;
+  object-fit:cover!important;
+  max-height:none!important
+}
+@media(min-width:721px) {
+  #riders-list,#leaders-list {
+    grid-template-columns:repeat(2,190px)!important;
+    grid-auto-columns:190px!important
+  }
+  #riders-list>.card,#leaders-list>.card {
+    width:190px!important;
+    min-width:190px!important;
+    max-width:190px!important
+  }
+}
+/* Preserve two-row horizontal scrolling and fixed photo ratios */
+#riders-list,#leaders-list {
+  display:grid!important;
+  grid-auto-flow:column!important;
+  grid-template-rows:repeat(2,max-content)!important;
+  grid-template-columns:none!important;
+  grid-auto-columns:160px!important;
+  grid-auto-rows:auto!important;
+  align-items:start!important;
+  justify-content:start!important;
+  gap:14px 16px!important;
+  overflow-x:auto!important;
+  overflow-y:hidden!important;
+  max-height:none!important;
+  height:auto!important;
+  scroll-snap-type:x mandatory!important;
+  -webkit-overflow-scrolling:touch!important
+}
+#riders-list>.card,#leaders-list>.card {
+  grid-column:auto!important;
+  grid-row:auto!important;
+  width:160px!important;
+  min-width:160px!important;
+  max-width:160px!important;
+  flex:none!important;
+  align-self:start!important;
+  scroll-snap-align:start!important;
+  position:relative!important;
+  overflow:hidden!important
+}
+#riders-list .story-photo,#leaders-list .story-photo {
+  position:relative!important;
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  margin:0!important;
+  overflow:hidden!important;
+  background:#080808!important
+}
+#riders-list .story-photo {
+  aspect-ratio:9/16!important
+}
+#leaders-list .story-photo {
+  aspect-ratio:3/4!important
+}
+#riders-list .story-photo img,#leaders-list .story-photo img {
+  position:absolute!important;
+  inset:0!important;
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  object-fit:cover!important;
+  margin:0!important
+}
+#riders-list .story-link,#leaders-list .story-link {
+  position:absolute!important;
+  left:9px!important;
+  bottom:9px!important;
+  z-index:5!important
+}
+@media(min-width:721px) {
+  #riders-list,#leaders-list {
+    grid-auto-columns:190px!important
+  }
+  #riders-list>.card,#leaders-list>.card {
+    width:190px!important;
+    min-width:190px!important;
+    max-width:190px!important
+  }
+}
