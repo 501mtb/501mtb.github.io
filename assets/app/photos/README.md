@@ -7,7 +7,7 @@ This folder is the single shared photo source for the 501MTB website and Android
 - `pdc/`: 501MTB cover and slideshow, 16:9.
 - `rides/`: ride photos, 16:9.
 - `events/`: event photos, 16:9.
-- `riders/`: rider portraits, 3:4.
+- `riders/`: rider portraits, 9:16.
 - `leaders/`: leader portraits, 3:4.
 - `gallery/`: general MTB gallery, 16:9.
 
