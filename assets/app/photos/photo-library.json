@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "library": "501MTB Photo Library",
+  "baseUrl": "https://501mtb.github.io/assets/app/photos/",
+  "imageFormat": "webp",
+  "supportedRatios": ["1:1", "16:9", "3:4"],
+  "categories": {
+    "pdp": { "label": "501MTB Profile", "requiredRatio": "1:1" },
+    "pdc": { "label": "501MTB Cover", "requiredRatio": "16:9" },
+    "rides": { "label": "Rides", "requiredRatio": "16:9" },
+    "events": { "label": "Events", "requiredRatio": "16:9" },
+    "riders": { "label": "Riders", "requiredRatio": "3:4" },
+    "leaders": { "label": "Leaders", "requiredRatio": "3:4" },
+    "gallery": { "label": "Gallery", "requiredRatio": "16:9" }
+  },
+  "slots": {
+    "501mtb.pdp": { "category": "pdp", "requiredRatio": "1:1", "selectionMode": "single" },
+    "501mtb.pdc": { "category": "pdc", "requiredRatio": "16:9", "selectionMode": "slideshow" }
+  },
+  "slideshows": {
+    "501mtb.pdc": {
+      "enabled": true,
+      "autoplay": true,
+      "intervalMs": 6000,
+      "transition": "fade",
+      "pauseOnUserInteractionMs": 8000,
+      "loop": true,
+      "showIndicators": true,
+      "showArrows": true,
+      "imageIds": []
+    }
+  },
+  "images": []
+}
