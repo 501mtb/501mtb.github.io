@@ -1,3 +1,4 @@
+# Refresh catalogue after the 9:16 portrait standard update.
 #!/usr/bin/env python3
 """Build the 501MTB photo catalogue using dimensions read from the JPG files."""
 
