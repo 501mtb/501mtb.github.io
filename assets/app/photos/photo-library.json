@@ -70,9 +70,9 @@
       "id": "pdc_001",
       "category": "pdc",
       "fileName": "PDC_001.jpg",
-      "ratio": "16:9",
       "width": 2000,
       "height": 1125,
+      "ratio": "16:9",
       "alt": "501MTB cover photograph",
       "tags": [
         "501MTB",
@@ -85,9 +85,9 @@
       "id": "events_002",
       "category": "events",
       "fileName": "EVENT_002.jpg",
-      "ratio": "16:9",
       "width": 800,
       "height": 450,
+      "ratio": "16:9",
       "alt": "501MTB event photograph 002",
       "tags": [
         "event",
@@ -99,9 +99,9 @@
       "id": "events_004",
       "category": "events",
       "fileName": "EVENT_004.jpg",
-      "ratio": "16:9",
       "width": 800,
       "height": 450,
+      "ratio": "16:9",
       "alt": "501MTB event photograph 004",
       "tags": [
         "event",
@@ -113,9 +113,9 @@
       "id": "events_008",
       "category": "events",
       "fileName": "EVENT_008.jpg",
-      "ratio": "16:9",
       "width": 800,
       "height": 450,
+      "ratio": "16:9",
       "alt": "501MTB event photograph 008",
       "tags": [
         "event",
@@ -127,9 +127,9 @@
       "id": "events_009",
       "category": "events",
       "fileName": "EVENT_009.jpg",
-      "ratio": "16:9",
       "width": 1066,
       "height": 600,
+      "ratio": "16:9",
       "alt": "501MTB event photograph 009",
       "tags": [
         "event",
@@ -141,9 +141,9 @@
       "id": "events_010",
       "category": "events",
       "fileName": "EVENT_010.jpg",
-      "ratio": "16:9",
       "width": 1067,
       "height": 600,
+      "ratio": "16:9",
       "alt": "501MTB event photograph 010",
       "tags": [
         "event",
@@ -155,9 +155,9 @@
       "id": "events_013",
       "category": "events",
       "fileName": "EVENT_013.jpg",
-      "ratio": "16:9",
       "width": 1800,
       "height": 1013,
+      "ratio": "16:9",
       "alt": "501MTB event photograph 013",
       "tags": [
         "event",
@@ -169,9 +169,9 @@
       "id": "events_015",
       "category": "events",
       "fileName": "EVENT_015.jpg",
-      "ratio": "16:9",
       "width": 2000,
       "height": 1125,
+      "ratio": "16:9",
       "alt": "501MTB event photograph 015",
       "tags": [
         "event",
@@ -183,9 +183,9 @@
       "id": "events_017",
       "category": "events",
       "fileName": "EVENT_017.jpg",
-      "ratio": "16:9",
       "width": 1400,
       "height": 788,
+      "ratio": "16:9",
       "alt": "501MTB event photograph 017",
       "tags": [
         "event",
@@ -197,9 +197,9 @@
       "id": "events_018",
       "category": "events",
       "fileName": "EVENT_018.jpg",
-      "ratio": "16:9",
       "width": 1400,
       "height": 788,
+      "ratio": "16:9",
       "alt": "501MTB event photograph 018",
       "tags": [
         "event",
@@ -211,9 +211,9 @@
       "id": "events_019",
       "category": "events",
       "fileName": "EVENT_019.jpg",
-      "ratio": "16:9",
       "width": 1800,
       "height": 1013,
+      "ratio": "16:9",
       "alt": "501MTB event photograph 019",
       "tags": [
         "event",
@@ -222,96 +222,12 @@
       "active": true
     },
     {
-      "id": "leaders_001",
-      "category": "leaders",
-      "fileName": "LEADER_001.jpg",
-      "ratio": "3:4",
-      "width": 800,
-      "height": 1067,
-      "alt": "501MTB leader portrait 001",
-      "tags": [
-        "leader",
-        "portrait"
-      ],
-      "active": true
-    },
-    {
-      "id": "leaders_003",
-      "category": "leaders",
-      "fileName": "LEADER_003.jpg",
-      "ratio": "3:4",
-      "width": 600,
-      "height": 800,
-      "alt": "501MTB leader portrait 003",
-      "tags": [
-        "leader",
-        "portrait"
-      ],
-      "active": true
-    },
-    {
-      "id": "leaders_004",
-      "category": "leaders",
-      "fileName": "LEADER_004.jpg",
-      "ratio": "3:4",
-      "width": 600,
-      "height": 800,
-      "alt": "501MTB leader portrait 004",
-      "tags": [
-        "leader",
-        "portrait"
-      ],
-      "active": true
-    },
-    {
-      "id": "leaders_005",
-      "category": "leaders",
-      "fileName": "LEADER_005.jpg",
-      "ratio": "3:4",
-      "width": 800,
-      "height": 1067,
-      "alt": "501MTB leader portrait 005",
-      "tags": [
-        "leader",
-        "portrait"
-      ],
-      "active": true
-    },
-    {
-      "id": "leaders_006",
-      "category": "leaders",
-      "fileName": "LEADER_006.jpg",
-      "ratio": "3:4",
-      "width": 600,
-      "height": 800,
-      "alt": "501MTB leader portrait 006",
-      "tags": [
-        "leader",
-        "portrait"
-      ],
-      "active": true
-    },
-    {
-      "id": "leaders_007",
-      "category": "leaders",
-      "fileName": "LEADER_007.jpg",
-      "ratio": "3:4",
-      "width": 800,
-      "height": 1067,
-      "alt": "501MTB leader portrait 007",
-      "tags": [
-        "leader",
-        "portrait"
-      ],
-      "active": true
-    },
-    {
       "id": "riders_001",
       "category": "riders",
       "fileName": "RIDER_001.jpg",
-      "ratio": "3:4",
       "width": 600,
       "height": 799,
+      "ratio": "3:4",
       "alt": "501MTB rider portrait 001",
       "tags": [
         "rider",
@@ -323,9 +239,9 @@
       "id": "riders_002",
       "category": "riders",
       "fileName": "RIDER_002.jpg",
-      "ratio": "3:4",
       "width": 600,
       "height": 800,
+      "ratio": "3:4",
       "alt": "501MTB rider portrait 002",
       "tags": [
         "rider",
@@ -337,9 +253,9 @@
       "id": "riders_003",
       "category": "riders",
       "fileName": "RIDER_003.jpg",
-      "ratio": "3:4",
       "width": 600,
       "height": 800,
+      "ratio": "3:4",
       "alt": "501MTB rider portrait 003",
       "tags": [
         "rider",
@@ -351,9 +267,9 @@
       "id": "riders_004",
       "category": "riders",
       "fileName": "RIDER_004.jpg",
-      "ratio": "3:4",
       "width": 600,
       "height": 800,
+      "ratio": "3:4",
       "alt": "501MTB rider portrait 004",
       "tags": [
         "rider",
@@ -365,9 +281,9 @@
       "id": "riders_005",
       "category": "riders",
       "fileName": "RIDER_005.jpg",
-      "ratio": "3:4",
       "width": 600,
       "height": 800,
+      "ratio": "3:4",
       "alt": "501MTB rider portrait 005",
       "tags": [
         "rider",
@@ -379,9 +295,9 @@
       "id": "riders_006",
       "category": "riders",
       "fileName": "RIDER_006.jpg",
-      "ratio": "3:4",
       "width": 600,
       "height": 801,
+      "ratio": "3:4",
       "alt": "501MTB rider portrait 006",
       "tags": [
         "rider",
@@ -393,9 +309,9 @@
       "id": "riders_007",
       "category": "riders",
       "fileName": "RIDER_007.jpg",
-      "ratio": "3:4",
       "width": 600,
       "height": 800,
+      "ratio": "3:4",
       "alt": "501MTB rider portrait 007",
       "tags": [
         "rider",
@@ -407,9 +323,9 @@
       "id": "riders_008",
       "category": "riders",
       "fileName": "RIDER_008.jpg",
-      "ratio": "3:4",
       "width": 600,
       "height": 800,
+      "ratio": "3:4",
       "alt": "501MTB rider portrait 008",
       "tags": [
         "rider",
@@ -421,9 +337,9 @@
       "id": "riders_009",
       "category": "riders",
       "fileName": "RIDER_009.jpg",
-      "ratio": "3:4",
       "width": 600,
       "height": 800,
+      "ratio": "3:4",
       "alt": "501MTB rider portrait 009",
       "tags": [
         "rider",
@@ -435,9 +351,9 @@
       "id": "riders_010",
       "category": "riders",
       "fileName": "RIDER_010.jpg",
-      "ratio": "3:4",
       "width": 600,
       "height": 799,
+      "ratio": "3:4",
       "alt": "501MTB rider portrait 010",
       "tags": [
         "rider",
@@ -449,9 +365,9 @@
       "id": "riders_011",
       "category": "riders",
       "fileName": "RIDER_011.jpg",
-      "ratio": "3:4",
       "width": 600,
       "height": 800,
+      "ratio": "3:4",
       "alt": "501MTB rider portrait 011",
       "tags": [
         "rider",
@@ -463,12 +379,96 @@
       "id": "riders_012",
       "category": "riders",
       "fileName": "RIDER_012.jpg",
-      "ratio": "3:4",
       "width": 600,
       "height": 800,
+      "ratio": "3:4",
       "alt": "501MTB rider portrait 012",
       "tags": [
         "rider",
+        "portrait"
+      ],
+      "active": true
+    },
+    {
+      "id": "leaders_001",
+      "category": "leaders",
+      "fileName": "LEADER_001.jpg",
+      "width": 800,
+      "height": 1067,
+      "ratio": "3:4",
+      "alt": "501MTB leader portrait 001",
+      "tags": [
+        "leader",
+        "portrait"
+      ],
+      "active": true
+    },
+    {
+      "id": "leaders_003",
+      "category": "leaders",
+      "fileName": "LEADER_003.jpg",
+      "width": 600,
+      "height": 800,
+      "ratio": "3:4",
+      "alt": "501MTB leader portrait 003",
+      "tags": [
+        "leader",
+        "portrait"
+      ],
+      "active": true
+    },
+    {
+      "id": "leaders_004",
+      "category": "leaders",
+      "fileName": "LEADER_004.jpg",
+      "width": 600,
+      "height": 800,
+      "ratio": "3:4",
+      "alt": "501MTB leader portrait 004",
+      "tags": [
+        "leader",
+        "portrait"
+      ],
+      "active": true
+    },
+    {
+      "id": "leaders_005",
+      "category": "leaders",
+      "fileName": "LEADER_005.jpg",
+      "width": 800,
+      "height": 1067,
+      "ratio": "3:4",
+      "alt": "501MTB leader portrait 005",
+      "tags": [
+        "leader",
+        "portrait"
+      ],
+      "active": true
+    },
+    {
+      "id": "leaders_006",
+      "category": "leaders",
+      "fileName": "LEADER_006.jpg",
+      "width": 600,
+      "height": 800,
+      "ratio": "3:4",
+      "alt": "501MTB leader portrait 006",
+      "tags": [
+        "leader",
+        "portrait"
+      ],
+      "active": true
+    },
+    {
+      "id": "leaders_007",
+      "category": "leaders",
+      "fileName": "LEADER_007.jpg",
+      "width": 800,
+      "height": 1067,
+      "ratio": "3:4",
+      "alt": "501MTB leader portrait 007",
+      "tags": [
+        "leader",
         "portrait"
       ],
       "active": true
