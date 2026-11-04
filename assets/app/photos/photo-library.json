@@ -62,7 +62,8 @@
       "showIndicators": true,
       "showArrows": true,
       "imageIds": [
-        "pdc_001"
+        "pdc_001",
+        "pdc_005"
       ]
     }
   },
@@ -79,6 +80,20 @@
         "501MTB",
         "cover",
         "slideshow"
+      ],
+      "active": true
+    },
+    {
+      "id": "pdc_005",
+      "category": "pdc",
+      "fileName": "PDC_005.jpg",
+      "width": 600,
+      "height": 604,
+      "ratio": "1:1",
+      "alt": "501MTB pdc photo PDC_005",
+      "tags": [
+        "501MTB",
+        "pdc"
       ],
       "active": true
     },
@@ -387,6 +402,216 @@
       "tags": [
         "rider",
         "portrait"
+      ],
+      "active": true
+    },
+    {
+      "id": "riders_013",
+      "category": "riders",
+      "fileName": "RIDER_013.jpg",
+      "width": 600,
+      "height": 1067,
+      "ratio": "9:16",
+      "alt": "501MTB riders photo RIDER_013",
+      "tags": [
+        "501MTB",
+        "riders"
+      ],
+      "active": true
+    },
+    {
+      "id": "riders_017",
+      "category": "riders",
+      "fileName": "RIDER_017.jpg",
+      "width": 600,
+      "height": 1066,
+      "ratio": "9:16",
+      "alt": "501MTB riders photo RIDER_017",
+      "tags": [
+        "501MTB",
+        "riders"
+      ],
+      "active": true
+    },
+    {
+      "id": "riders_018",
+      "category": "riders",
+      "fileName": "RIDER_018.jpg",
+      "width": 600,
+      "height": 1067,
+      "ratio": "9:16",
+      "alt": "501MTB riders photo RIDER_018",
+      "tags": [
+        "501MTB",
+        "riders"
+      ],
+      "active": true
+    },
+    {
+      "id": "riders_019",
+      "category": "riders",
+      "fileName": "RIDER_019.jpg",
+      "width": 600,
+      "height": 1067,
+      "ratio": "9:16",
+      "alt": "501MTB riders photo RIDER_019",
+      "tags": [
+        "501MTB",
+        "riders"
+      ],
+      "active": true
+    },
+    {
+      "id": "riders_020",
+      "category": "riders",
+      "fileName": "RIDER_020.jpg",
+      "width": 600,
+      "height": 1067,
+      "ratio": "9:16",
+      "alt": "501MTB riders photo RIDER_020",
+      "tags": [
+        "501MTB",
+        "riders"
+      ],
+      "active": true
+    },
+    {
+      "id": "riders_021",
+      "category": "riders",
+      "fileName": "RIDER_021.jpg",
+      "width": 600,
+      "height": 1066,
+      "ratio": "9:16",
+      "alt": "501MTB riders photo RIDER_021",
+      "tags": [
+        "501MTB",
+        "riders"
+      ],
+      "active": true
+    },
+    {
+      "id": "riders_022",
+      "category": "riders",
+      "fileName": "RIDER_022.jpg",
+      "width": 600,
+      "height": 1066,
+      "ratio": "9:16",
+      "alt": "501MTB riders photo RIDER_022",
+      "tags": [
+        "501MTB",
+        "riders"
+      ],
+      "active": true
+    },
+    {
+      "id": "riders_042",
+      "category": "riders",
+      "fileName": "RIDER_042.jpg",
+      "width": 600,
+      "height": 1066,
+      "ratio": "9:16",
+      "alt": "501MTB riders photo RIDER_042",
+      "tags": [
+        "501MTB",
+        "riders"
+      ],
+      "active": true
+    },
+    {
+      "id": "riders_043",
+      "category": "riders",
+      "fileName": "RIDER_043.jpg",
+      "width": 600,
+      "height": 1067,
+      "ratio": "9:16",
+      "alt": "501MTB riders photo RIDER_043",
+      "tags": [
+        "501MTB",
+        "riders"
+      ],
+      "active": true
+    },
+    {
+      "id": "riders_044",
+      "category": "riders",
+      "fileName": "RIDER_044.jpg",
+      "width": 600,
+      "height": 1067,
+      "ratio": "9:16",
+      "alt": "501MTB riders photo RIDER_044",
+      "tags": [
+        "501MTB",
+        "riders"
+      ],
+      "active": true
+    },
+    {
+      "id": "riders_045",
+      "category": "riders",
+      "fileName": "RIDER_045.jpg",
+      "width": 600,
+      "height": 1066,
+      "ratio": "9:16",
+      "alt": "501MTB riders photo RIDER_045",
+      "tags": [
+        "501MTB",
+        "riders"
+      ],
+      "active": true
+    },
+    {
+      "id": "riders_046",
+      "category": "riders",
+      "fileName": "RIDER_046.jpg",
+      "width": 600,
+      "height": 1067,
+      "ratio": "9:16",
+      "alt": "501MTB riders photo RIDER_046",
+      "tags": [
+        "501MTB",
+        "riders"
+      ],
+      "active": true
+    },
+    {
+      "id": "riders_047",
+      "category": "riders",
+      "fileName": "RIDER_047.jpg",
+      "width": 720,
+      "height": 1280,
+      "ratio": "9:16",
+      "alt": "501MTB riders photo RIDER_047",
+      "tags": [
+        "501MTB",
+        "riders"
+      ],
+      "active": true
+    },
+    {
+      "id": "riders_048",
+      "category": "riders",
+      "fileName": "RIDER_048.jpg",
+      "width": 720,
+      "height": 1280,
+      "ratio": "9:16",
+      "alt": "501MTB riders photo RIDER_048",
+      "tags": [
+        "501MTB",
+        "riders"
+      ],
+      "active": true
+    },
+    {
+      "id": "riders_049",
+      "category": "riders",
+      "fileName": "RIDER_049.jpg",
+      "width": 720,
+      "height": 1280,
+      "ratio": "9:16",
+      "alt": "501MTB riders photo RIDER_049",
+      "tags": [
+        "501MTB",
+        "riders"
       ],
       "active": true
     },
