@@ -1,0 +1,36 @@
+name: Update shared photo library catalogue
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "assets/app/photos/**/*.jpg"
+      - "scripts/generate_photo_library.py"
+
+permissions:
+  contents: write
+
+jobs:
+  catalogue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Generate catalogue from actual JPG dimensions
+        run: python scripts/generate_photo_library.py
+      - name: Commit catalogue changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/app/photos/photo-library.json
+          if git diff --cached --quiet; then
+            echo "Catalogue is already up to date."
+          else
+            git commit -m "Update shared photo library catalogue"
+            git push
+          fi
