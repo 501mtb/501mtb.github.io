@@ -9,7 +9,8 @@ SOURCE = Path("Classeur_501MTB_V2.xlsx")
 OUTPUT = Path("data/app-data.json")
 SHEETS = {
     "Events", "Riders", "Leaders",
-    "MemberRides", "Member Rides", "Member_Rides",
+    "MemberRides", "Member Rides", "Member_Rides", "Member Ride", "Member_Ride",
+    "IndividualRides", "Individual Rides", "Individual_Rides", "Member Ride Registry",
     "RideLog", "Ride Log", "RideRegistry", "Ride Registry",
 }
 
