@@ -77,6 +77,10 @@ def main() -> None:
         for image in catalogue.get("images", [])
         if image.get("fileName")
     }
+    supported = {
+        ratio: expected_ratio(ratio)
+        for ratio in catalogue.get("supportedRatios", [])
+    }
 
     images = []
     skipped = []
@@ -84,9 +88,6 @@ def main() -> None:
         folder = PHOTO_ROOT / category
         if not folder.is_dir():
             continue
-
-        required = definition["requiredRatio"]
-        expected = expected_ratio(required)
 
         for path in sorted(folder.glob("*.jpg")):
             try:
@@ -96,9 +97,10 @@ def main() -> None:
                 continue
 
             actual = width / height
-            if abs(actual - expected) > 0.01:
+            matched_ratio = min(supported, key=lambda ratio: abs(actual - supported[ratio]))
+            if abs(actual - supported[matched_ratio]) > 0.01:
                 skipped.append(
-                    f"{path.relative_to(ROOT)}: {width}x{height} does not match {required}"
+                    f"{path.relative_to(ROOT)}: {width}x{height} does not match a supported ratio"
                 )
                 continue
 
@@ -109,7 +111,7 @@ def main() -> None:
                 "fileName": path.name,
                 "width": width,
                 "height": height,
-                "ratio": required,
+                "ratio": matched_ratio,
                 "alt": previous.get("alt") or f"501MTB {category} photo {path.stem}",
                 "tags": previous.get("tags") or ["501MTB", category],
                 "active": previous.get("active", True),
